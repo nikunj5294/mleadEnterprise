@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7B6D68E9-874C-4F49-B6B1-77B71E7D92CC"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "370652E4-4CF3-4D59-831A-FD2BCF1C5F05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewMleadsEnterprise/Classes/AddLeadController/ScanBusinessLeadViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "631"
+            endingLineNumber = "631"
+            landmarkName = "callADDLeadScanCardWebService()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "370652E4-4CF3-4D59-831A-FD2BCF1C5F05 - 8c1a85889a19dad3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewMleadsEnterprise.ScanBusinessLeadViewController.callADDLeadScanCardWebService() -&gt; ()"
+                  moduleName = "NewMleadsEnterprise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Downloads/NewMleadsEnterprise-2%202-3/NewMleadsEnterprise/Classes/AddLeadController/ScanBusinessLeadViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "634"
+                  endingLineNumber = "634"
+                  offsetFromSymbolStart = "7412">
+               </Location>
+               <Location
+                  uuid = "370652E4-4CF3-4D59-831A-FD2BCF1C5F05 - e73967540428d669"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.MultipartFormData) -&gt; () in NewMleadsEnterprise.ScanBusinessLeadViewController.callADDLeadScanCardWebService() -&gt; ()"
+                  moduleName = "NewMleadsEnterprise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Downloads/NewMleadsEnterprise-2%202-3/NewMleadsEnterprise/Classes/AddLeadController/ScanBusinessLeadViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "634"
+                  endingLineNumber = "634"
+                  offsetFromSymbolStart = "3370">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DC2A5C1-D6C2-48B1-89A2-4DEA4E8D686B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewMleadsEnterprise/Classes/AddLeadController/ScanBusinessLeadViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "655"
+            endingLineNumber = "655"
+            landmarkName = "callADDLeadScanCardWebService()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

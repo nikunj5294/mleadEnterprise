@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MXE-tK-Idp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="HwO-iS-P2K">
+            <objects>
+                <viewController storyboardIdentifier="StringPickerPopOverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o7a-jb-uxD" customClass="StringPickerPopOverViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WyV-q2-wmH"/>
+                        <viewControllerLayoutGuide type="bottom" id="9wg-af-TjR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TWg-v0-7tB">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck5-gn-7tw">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ck5-gn-7tw" firstAttribute="leading" secondItem="TWg-v0-7tB" secondAttribute="leading" id="7CA-52-LGx"/>
+                            <constraint firstItem="Ck5-gn-7tw" firstAttribute="top" secondItem="TWg-v0-7tB" secondAttribute="top" id="8Wn-vY-mC2"/>
+                            <constraint firstAttribute="bottom" secondItem="Ck5-gn-7tw" secondAttribute="bottom" id="Nyr-6g-COg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ck5-gn-7tw" secondAttribute="trailing" id="zZJ-TV-WzG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Anv-7U-PSE">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="VYW-3H-ndR">
+                            <color key="tintColor" systemColor="tintColor"/>
+                            <connections>
+                                <action selector="btnCancelClick:" destination="o7a-jb-uxD" id="pT6-UK-Vxx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="fVK-qy-921">
+                            <color key="tintColor" systemColor="tintColor"/>
+                            <connections>
+                                <action selector="btnDoneClick:" destination="o7a-jb-uxD" id="gkC-Zu-aNk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="pickerView" destination="Ck5-gn-7tw" id="G1m-6Y-SKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiK-FT-KCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-13"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rQ9-Rx-abW">
+            <objects>
+                <navigationController id="MXE-tK-Idp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YuZ-O3-WsV">
+                        <rect key="frame" x="0.0" y="44" width="300" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o7a-jb-uxD" kind="relationship" relationship="rootViewController" id="E9h-al-znL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ab-Re-JFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

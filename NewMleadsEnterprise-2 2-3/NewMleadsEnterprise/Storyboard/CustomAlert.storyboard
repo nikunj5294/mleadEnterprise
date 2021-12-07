@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Email InfoVC-->
+        <scene sceneID="1Zo-1X-OIv">
+            <objects>
+                <viewController storyboardIdentifier="AlertEmailInfoVC" id="hEg-o5-IBA" customClass="AlertEmailInfoVC" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sib-6W-ApI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VC2-aB-6mv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khV-dG-4fO">
+                                <rect key="frame" x="41.5" y="225" width="331" height="446"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Email Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd0-Kf-md3">
+                                        <rect key="frame" x="10" y="10" width="311" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icon-72" translatesAutoresizingMaskIntoConstraints="NO" id="Nl9-QM-NJZ">
+                                        <rect key="frame" x="129.5" y="39" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="KFt-h5-FQS"/>
+                                            <constraint firstAttribute="width" secondItem="Nl9-QM-NJZ" secondAttribute="height" multiplier="1:1" id="dxY-Fm-Fnp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ESM-5Q-FQK">
+                                        <rect key="frame" x="10" y="391" width="311" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyT-es-znV">
+                                                <rect key="frame" x="0.0" y="0.0" width="100.5" height="35"/>
+                                                <color key="backgroundColor" name="app_theme_color"/>
+                                                <state key="normal" title="Continue">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnContinuePressed:" destination="hEg-o5-IBA" eventType="touchUpInside" id="wIm-79-The"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccw-CR-2t7">
+                                                <rect key="frame" x="105.5" y="0.0" width="100" height="35"/>
+                                                <color key="backgroundColor" name="app_theme_color"/>
+                                                <state key="normal" title="Purchase">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnPurchasePressed:" destination="hEg-o5-IBA" eventType="touchUpInside" id="gh1-CB-TvQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-QF-vc8">
+                                                <rect key="frame" x="210.5" y="0.0" width="100.5" height="35"/>
+                                                <color key="backgroundColor" name="app_theme_color"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnCancelPressed:" destination="hEg-o5-IBA" eventType="touchUpInside" id="rgd-2c-Kgy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Nyt-3Y-vP1"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wdc-oC-QtZ">
+                                        <rect key="frame" x="10" y="116" width="311" height="260"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can send us to 1000 emails daily and up to 3000 emails monthly." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw3-2i-P9x">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can purchase quota of additional 5000 email counts for just $2." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktw-rU-eWO">
+                                                <rect key="frame" x="0.0" y="58" width="311" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYZ-rt-7yf">
+                                                <rect key="frame" x="0.0" y="116" width="311" height="107.5"/>
+                                                <string key="text">Note:Once your quota of additional 5000 email counts has been used then you will automatically migrated to normal email sending capabilty of daily 1000 emails and monthly 3000 emails.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Reaming Count(s): 3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHj-tP-4r2">
+                                                <rect key="frame" x="0.0" y="238.5" width="311" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Nl9-QM-NJZ" firstAttribute="centerX" secondItem="Hd0-Kf-md3" secondAttribute="centerX" id="1kv-RF-dIR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hd0-Kf-md3" secondAttribute="trailing" constant="10" id="2aA-d4-TJq"/>
+                                    <constraint firstItem="Hd0-Kf-md3" firstAttribute="top" secondItem="khV-dG-4fO" secondAttribute="top" constant="10" id="3zk-b0-nMF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ESM-5Q-FQK" secondAttribute="trailing" constant="10" id="8XZ-HG-5Hr"/>
+                                    <constraint firstItem="Nl9-QM-NJZ" firstAttribute="top" secondItem="Hd0-Kf-md3" secondAttribute="bottom" constant="5" id="JaP-vs-TDM"/>
+                                    <constraint firstItem="Wdc-oC-QtZ" firstAttribute="top" secondItem="Nl9-QM-NJZ" secondAttribute="bottom" constant="5" id="S6x-vj-m5T"/>
+                                    <constraint firstItem="Hd0-Kf-md3" firstAttribute="leading" secondItem="khV-dG-4fO" secondAttribute="leading" constant="10" id="Tvc-ct-YKG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wdc-oC-QtZ" secondAttribute="bottom" constant="70" id="YZm-GP-bqC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wdc-oC-QtZ" secondAttribute="trailing" constant="10" id="m6s-ii-KKP"/>
+                                    <constraint firstItem="ESM-5Q-FQK" firstAttribute="top" secondItem="Wdc-oC-QtZ" secondAttribute="bottom" constant="15" id="mbh-Tg-d9o"/>
+                                    <constraint firstItem="Wdc-oC-QtZ" firstAttribute="leading" secondItem="khV-dG-4fO" secondAttribute="leading" constant="10" id="ppM-2x-BdO"/>
+                                    <constraint firstItem="ESM-5Q-FQK" firstAttribute="leading" secondItem="khV-dG-4fO" secondAttribute="leading" constant="10" id="yqy-hJ-ykV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="821-dd-Akd"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="khV-dG-4fO" firstAttribute="centerY" secondItem="Sib-6W-ApI" secondAttribute="centerY" id="3T0-LT-61S"/>
+                            <constraint firstItem="khV-dG-4fO" firstAttribute="width" secondItem="Sib-6W-ApI" secondAttribute="width" multiplier="0.8" id="43F-Ef-6Ix"/>
+                            <constraint firstItem="VC2-aB-6mv" firstAttribute="top" secondItem="821-dd-Akd" secondAttribute="top" id="C8H-TO-dhW"/>
+                            <constraint firstItem="VC2-aB-6mv" firstAttribute="bottom" secondItem="821-dd-Akd" secondAttribute="bottom" id="MW9-dY-oWX"/>
+                            <constraint firstItem="VC2-aB-6mv" firstAttribute="leading" secondItem="821-dd-Akd" secondAttribute="leading" id="PUd-Nj-xdV"/>
+                            <constraint firstItem="khV-dG-4fO" firstAttribute="centerX" secondItem="Sib-6W-ApI" secondAttribute="centerX" id="cvH-3n-Uex"/>
+                            <constraint firstItem="VC2-aB-6mv" firstAttribute="trailing" secondItem="821-dd-Akd" secondAttribute="trailing" id="g5V-Ni-yqH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSG-XY-FbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501.60000000000002" y="-231.63418290854574"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-72" width="72" height="72"/>
+        <namedColor name="app_theme_color">
+            <color red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

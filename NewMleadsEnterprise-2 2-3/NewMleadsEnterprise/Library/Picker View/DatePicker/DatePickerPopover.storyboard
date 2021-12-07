@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2U3-xo-4KH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="ZkR-JA-6cw">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerPopoverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="urE-ec-fPp" customClass="DatePickerPopoverViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCF-En-rh1">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-X5-Vvp">
+                                <rect key="frame" x="0.0" y="88" width="300" height="162"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwY-KH-ne0">
+                                <rect key="frame" x="20" y="270" width="260" height="30"/>
+                                <connections>
+                                    <action selector="btnClear:" destination="urE-ec-fPp" eventType="touchUpInside" id="xqT-74-3Ow"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="keF-Zy-z8M"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cwY-KH-ne0" secondAttribute="bottom" id="Eas-T1-5ff"/>
+                            <constraint firstItem="VdW-X5-Vvp" firstAttribute="trailing" secondItem="keF-Zy-z8M" secondAttribute="trailing" id="LUx-sz-mHw"/>
+                            <constraint firstItem="VdW-X5-Vvp" firstAttribute="top" secondItem="keF-Zy-z8M" secondAttribute="top" id="Ss9-xE-Ksz"/>
+                            <constraint firstItem="cwY-KH-ne0" firstAttribute="top" secondItem="VdW-X5-Vvp" secondAttribute="bottom" constant="20" id="ZA1-w8-7Nf"/>
+                            <constraint firstAttribute="trailing" secondItem="cwY-KH-ne0" secondAttribute="trailing" constant="20" id="hHj-Y9-n9a"/>
+                            <constraint firstItem="VdW-X5-Vvp" firstAttribute="leading" secondItem="keF-Zy-z8M" secondAttribute="leading" id="pmc-kY-PeS"/>
+                            <constraint firstItem="cwY-KH-ne0" firstAttribute="leading" secondItem="QCF-En-rh1" secondAttribute="leading" constant="20" id="rme-Zq-dHV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Ytf-Wz-MbM">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="oCq-g4-GQN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnCancel:" destination="urE-ec-fPp" id="ZC9-9R-d16"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="qpd-dr-IUG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnDone:" destination="urE-ec-fPp" id="Ips-bj-QWn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <connections>
+                        <outlet property="clearButton" destination="cwY-KH-ne0" id="6Ap-Wb-SO3"/>
+                        <outlet property="picker" destination="VdW-X5-Vvp" id="UdT-My-reZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ce-Un-aD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730.43478260869574" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4K1-54-EeH">
+            <objects>
+                <navigationController id="2U3-xo-4KH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aRh-Jb-Tn7">
+                        <rect key="frame" x="0.0" y="44" width="300" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="urE-ec-fPp" kind="relationship" relationship="rootViewController" id="eSA-Um-Vna"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ir-Z5-T1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="126.5625"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

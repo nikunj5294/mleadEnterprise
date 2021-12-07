@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'NewMleadsEnterprise' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NewMleadsEnterprise
+  pod 'TextFieldEffects'
+  pod 'Alamofire'
+  pod 'MaterialComponents'
+  pod 'NVActivityIndicatorView'
+  pod 'JSSAlertView'
+  pod 'SSKeychain'
+  pod 'CheckboxButton'
+  pod 'DLRadioButton'
+  pod 'GoogleSignIn'
+  pod 'LinkedInSignIn'
+  pod 'LinkedinSwift'
+  pod 'Firebase'
+  pod 'FirebaseCore'
+  pod 'SVProgressHUD'
+#	pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
+  pod 'SDWebImage'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'GoogleMaps'
+end
