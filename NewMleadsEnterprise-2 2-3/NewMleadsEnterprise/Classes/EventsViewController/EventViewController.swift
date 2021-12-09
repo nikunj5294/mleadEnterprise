@@ -81,7 +81,6 @@ class EventViewController: UIViewController,NVActivityIndicatorViewable,UITextFi
         startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
 
         //self.callWebService(TypeId: objLoginUserDetail.userId!, selectedId: self.selectedID)
-        self.callWebService(TypeId: "17", selectedId: (objLoginUserDetail.createTimeStamp! as AnyObject) as! String)
         
         tblEventsView.reloadData()
         
@@ -98,6 +97,11 @@ class EventViewController: UIViewController,NVActivityIndicatorViewable,UITextFi
         
         
         
+    }
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        self.callWebService(TypeId: "17", selectedId: (objLoginUserDetail.createTimeStamp! as AnyObject) as! String)
     }
     //MARK:- WillAppear File.
     override func viewWillAppear(_ animated: Bool) {

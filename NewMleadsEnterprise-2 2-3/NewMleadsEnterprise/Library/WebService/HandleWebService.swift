@@ -414,7 +414,62 @@ open class HandleWebService:NSObject
         }
         return (isStatus, arrTeamMember, arrAllEvents, arrDict)
     }
-    
+    func handleGetEventWiseLeadList(_ response: Data) -> (Status: Bool, arrLeadList: NSMutableArray)
+    {
+        var isStatus:Bool = false
+        let arrAllEvents = NSMutableArray()
+        let json = JSON(data: response)
+        print(json)
+        
+        
+        if json["getEventWiseLeadList"]["status"].string == "YES"
+        {
+            let eventInfo = json["getEventWiseLeadList"]["eventInfoLeadList"]["eventInfo"]
+            let arrLeadList = json["getEventWiseLeadList"]["eventInfoLeadList"]["EventsLeads"].array
+            for k in 0..<arrLeadList!.count
+            {
+                let objLeadlist: LeadList = LeadList()
+                
+                objLeadlist.createTimeStamp = arrLeadList![k]["leadId"].string
+                objLeadlist.eventId = eventInfo["eventId"].string
+                objLeadlist.firstName = arrLeadList![k]["firstName"].string
+                objLeadlist.lastName = arrLeadList![k]["lastName"].string
+                objLeadlist.company = arrLeadList![k]["company"].string
+                objLeadlist.email = arrLeadList![k]["email"].string
+                objLeadlist.phone = arrLeadList![k]["phone"].string
+                objLeadlist.imgURL = arrLeadList![k]["photo_path"].string
+                objLeadlist.photo_path_thumbnail = arrLeadList![k]["photo_path_thumbnail"].string
+                
+                objLeadlist.leadStatus = arrLeadList![k]["lead_status"].string
+                objLeadlist.leadStatusName = arrLeadList![k]["leadStatusTitle"].string
+                objLeadlist.leadStatusURL = arrLeadList![k]["leadStatusUrl"].string
+                objLeadlist.leadId = arrLeadList![k]["leadId"].string
+                
+                objLeadlist.target = arrLeadList![k]["targerAmount"].string
+                objLeadlist.periods = arrLeadList![k]["periods"].string
+                objLeadlist.targetFuture = arrLeadList![k]["targetFutureAmount"].string
+                objLeadlist.targetClosing = arrLeadList![k]["tagetCloseDate"].string
+                objLeadlist.proOfClosing = arrLeadList![k]["probabilityClosePer"].string
+                objLeadlist.nextStepDate = arrLeadList![k]["nextStepDate"].string
+                objLeadlist.jobTitle = arrLeadList![k]["job_title"].string
+                
+                objLeadlist.notes = arrLeadList![k]["notes"].string
+                objLeadlist.otherPhone = arrLeadList![k]["other_phone"].string
+                objLeadlist.addedLeadType = arrLeadList![k]["addedLeadType"].string
+                objLeadlist.recordSoundUrl = arrLeadList![k]["recordSoundUrl"].string
+                objLeadlist.processBadge = arrLeadList![k]["process"].string
+                objLeadlist.followup_action_list = arrLeadList![k]["followup_action_list"].string
+                
+                //objLeadlist.product
+                
+                //objLeadlist.leadAddedType = leadType
+             
+                arrAllEvents.add(objLeadlist)
+            }
+            isStatus = true
+        }
+        return (isStatus, arrAllEvents)
+    }
    //20/1/2020/11/2019
     //MARK:- Close window In Tempary on DAta Change in team member and event within date 16/10/2019
     func handleGetEventListWithin(_ response: Data) -> (Status: Bool, teamMember: [UserDetail], arrEventL: NSMutableArray)
@@ -543,8 +598,12 @@ open class HandleWebService:NSObject
                                 objEvent.eventid = (dicEvent["eventId"] as! String)
                                 objEvent.createdTimeStamp = (dicEvent["eventId"] as! String)
                                 objEvent.location =  dicEvent["location"] as! String
-                                objEvent.city =  dicEvent["city"] as! String
+                                objEvent.city =  dicEvent["city"] as? String
+                                objEvent.state =  dicEvent["state"] as? String
+                                objEvent.country =  dicEvent["country"] as? String
                                 objEvent.eventDate = dicEvent["eventDate"] as! String
+                                objEvent.eventEndDate = dicEvent["eventEndDate"] as! String
+                                objEvent.isPrivate = dicEvent["isPrivate"] as! String
                                 objEvent.AddedFor = dicEvent["AddedFor"] as! String
                                 objEvent.event_registration = dicEvent["event_registration"] as! String
                                 objEvent.bSocial = dicEvent["b_social"] as! String

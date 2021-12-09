@@ -62,7 +62,6 @@ class AddEventViewController: UIViewController,UITextFieldDelegate,NVActivityInd
     var isCountrySelected = Bool()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -76,52 +75,56 @@ class AddEventViewController: UIViewController,UITextFieldDelegate,NVActivityInd
             btnEndDateOutlet.isUserInteractionEnabled = false
         }
         
-//        if isEditEvent
-//        {
-//            self.navigationItem.title = "Edit Event"
-//            //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.btnSaveClickAction(_:)))
-//
-//            alertTitle = "Edit Event!"
-//
-//            EventDataField()
-//        }
-//        else if isAddEvent
-//        {
-            btnVisibleTeamMember.isSelected = true
-            isPrivate = "N"
-        
-            
-            alertTitle = "Add Event!"
-        
-            let currentDate = Utilities.DateToStringFormatter(Date: Date(), ToString: "MM-dd-yyyy")
-            lblStartDate.text = currentDate
-            lblEndDate.text = currentDate
-            
-            strEvntStartDate = Utilities.dateFormatter(Date: lblStartDate.text!, FromString: "MM-dd-yyyy", ToString: "yyyy-MM-dd")
-            strEventEndDate = Utilities.dateFormatter(Date: lblEndDate.text!, FromString: "MM-dd-yyyy", ToString: "yyyy-MM-dd")
-            
-            isFirstTime = true
-        //}
-        if isViewEvent
+        if isEditEvent
         {
-            self.navigationItem.title = "View Event"
-            txtEventsName.isUserInteractionEnabled = false
-            txtLocation.isUserInteractionEnabled = false
-            Country.isUserInteractionEnabled = false
-            txtState.isUserInteractionEnabled = false
-            txtcity.isUserInteractionEnabled = false
-            
-            txtPurpose.isUserInteractionEnabled = false
-            txtContactPerson.isUserInteractionEnabled = false
-            txtPhone.isUserInteractionEnabled = false
-            txtNote.isUserInteractionEnabled = false
-            
-            btnStartDateOutlet.isUserInteractionEnabled = false
-            btnEndDateOutlet.isUserInteractionEnabled = false
-            btnVisibleTeamMember.isUserInteractionEnabled = false
-            btnVisibleOnlyMe.isUserInteractionEnabled = false
-            
+            self.navigationItem.title = "Edit Event"
+            //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.btnSaveClickAction(_:)))
+
+            alertTitle = "Edit Event!"
+
             EventDataField()
+        }
+        else
+        {
+            
+    //        else if isAddEvent
+    //        {
+                btnVisibleTeamMember.isSelected = true
+                isPrivate = "N"
+            
+                
+                alertTitle = "Add Event!"
+            
+                let currentDate = Utilities.DateToStringFormatter(Date: Date(), ToString: "MM-dd-yyyy")
+                lblStartDate.text = currentDate
+                lblEndDate.text = currentDate
+                
+                strEvntStartDate = Utilities.dateFormatter(Date: lblStartDate.text!, FromString: "MM-dd-yyyy", ToString: "yyyy-MM-dd")
+                strEventEndDate = Utilities.dateFormatter(Date: lblEndDate.text!, FromString: "MM-dd-yyyy", ToString: "yyyy-MM-dd")
+                
+                isFirstTime = true
+            //}
+            if isViewEvent
+            {
+                self.navigationItem.title = "View Event"
+                txtEventsName.isUserInteractionEnabled = false
+                txtLocation.isUserInteractionEnabled = false
+                Country.isUserInteractionEnabled = false
+                txtState.isUserInteractionEnabled = false
+                txtcity.isUserInteractionEnabled = false
+                
+                txtPurpose.isUserInteractionEnabled = false
+                txtContactPerson.isUserInteractionEnabled = false
+                txtPhone.isUserInteractionEnabled = false
+                txtNote.isUserInteractionEnabled = false
+                
+                btnStartDateOutlet.isUserInteractionEnabled = false
+                btnEndDateOutlet.isUserInteractionEnabled = false
+                btnVisibleTeamMember.isUserInteractionEnabled = false
+                btnVisibleOnlyMe.isUserInteractionEnabled = false
+                
+                EventDataField()
+            }
         }
     }
     
@@ -130,6 +133,9 @@ class AddEventViewController: UIViewController,UITextFieldDelegate,NVActivityInd
     {
         txtEventsName.text = objEventDetail.eventName
         txtLocation.text = objEventDetail.location
+        txtcity.text = objEventDetail.city
+        txtState.text = objEventDetail.state
+        Country.text = objEventDetail.country
         
         txtPurpose.text = objEventDetail.purpose
         txtContactPerson.text = objEventDetail.contactPerson
@@ -306,61 +312,62 @@ class AddEventViewController: UIViewController,UITextFieldDelegate,NVActivityInd
         }
         else
         {
-            let Phone = txtPhone.text!
-            let PhoneNo = Phone.replacingOccurrences(of: "+", with: "%2B", options: [], range: nil)
-            
-            let param:[String : String] = ["userId":objLoginUserDetail.userId!,
-                                           "eventName":txtEventsName.text!,
-                                           "location":txtLocation.text!,
-                                           "city":txtcity.text!,
-                                           "state":txtState.text!,
-                                           "country":Country.text!,
-                                           "eventDate":strEvntStartDate,
-                                           "eventEndDate":strEventEndDate,
-                                           "purpose":txtPurpose.text!,
-                                           "contactPerson":txtContactPerson.text!,
-                                           "phone":txtPhone.text!,
-                                           "notes":txtNote.text,
-                                           "createdTimeStamp":"\(Int(dateTimeStamp.timeIntervalSince1970))",
-                                           "updatedTimeStamp":"0",
-                                           "phone_ext":"",
-                                           "other_phone":"",
-                                           "isPrivate":isPrivate] //as? [String : AnyObject]
-            
-            //Progress Bar Loding...
-            let size = CGSize(width: 30, height: 30)
-            self.startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
-            
-            webService.doRequestPost(ADD_EVENT_API_URL, params: param as [String : AnyObject], key: "addEvent", delegate: self)
-            
-            
-//            if isEditEvent
-//            {
+            if isEditEvent
+            {
+
+                let param = ["eventId":objEventDetail.eventid!,
+                             "eventName":txtEventsName.text!,
+                             "location":txtLocation.text!,
+                             "city":txtcity.text!,
+                             "state":txtState.text!,
+                             "country":Country.text!,
+                             "eventDate":strEvntStartDate,
+                             "eventEndDate":strEventEndDate,
+                             "purpose":txtPurpose.text!,
+                             "contactPerson":txtContactPerson.text!,
+                             "phone":txtPhone.text!,
+                             "notes":txtNote.text!,
+                             "updatedTimeStamp":"\(Int(Date().timeIntervalSince1970))",
+                             "isPrivate":isPrivate,
+                             "phone_ext":"",
+                             "other_phone":""
+                    ] as [String : Any]
 //
-//                let param = ["eventId":eventID,
-//                             "eventName":txtEventsName.text!,
-//                             "location":txtLocation.text!,
-//                             "city":txtcity.text!,
-//                             "state":txtState.text!,
-//                             "country":Country.text!,
-//                             "eventDate":strEvntStartDate,
-//                             "eventEndDate":strEventEndDate,
-//                             "purpose":txtPurpose.text!,
-//                             "contactPerson":txtContactPerson.text!,
-//                             "phone":txtPhone.text!,
-//                             "phone_ext":"",
-//                             "other_phone":"",
-//                             "notes":txtNote.text!,
-//                             "updatedTimeStamp":objEventDetail.updatedTimeStamp!,
-//                             "isPrivate":isPrivate
-//                    ] as [String : Any]
-////
-////
-//                let size = CGSize(width: 30, height: 30)
-//                self.startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
 //
-//                //webService.doRequestPost(EDIT_EVENT_API_KEY, params: param as [String : AnyObject], key: "updateEvent", delegate: self)
-//            }
+                let size = CGSize(width: 30, height: 30)
+                self.startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
+
+                webService.doRequestPost(EDIT_EVENT_API_KEY, params: param as [String : AnyObject], key: "updateEvent", delegate: self)
+            }
+            else
+            {
+                let Phone = txtPhone.text!
+                let PhoneNo = Phone.replacingOccurrences(of: "+", with: "%2B", options: [], range: nil)
+                
+                let param:[String : String] = ["userId":objLoginUserDetail.userId!,
+                                               "eventName":txtEventsName.text!,
+                                               "location":txtLocation.text!,
+                                               "city":txtcity.text!,
+                                               "state":txtState.text!,
+                                               "country":Country.text!,
+                                               "eventDate":strEvntStartDate,
+                                               "eventEndDate":strEventEndDate,
+                                               "purpose":txtPurpose.text!,
+                                               "contactPerson":txtContactPerson.text!,
+                                               "phone":txtPhone.text!,
+                                               "notes":txtNote.text,
+                                               "createdTimeStamp":"\(Int(dateTimeStamp.timeIntervalSince1970))",
+                                               "updatedTimeStamp":"0",
+                                               "phone_ext":"",
+                                               "other_phone":"",
+                                               "isPrivate":isPrivate] //as? [String : AnyObject]
+                
+                //Progress Bar Loding...
+                let size = CGSize(width: 30, height: 30)
+                self.startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
+                
+                webService.doRequestPost(ADD_EVENT_API_URL, params: param as [String : AnyObject], key: "addEvent", delegate: self)
+            }
 //
             
                 
@@ -386,7 +393,14 @@ class AddEventViewController: UIViewController,UITextFieldDelegate,NVActivityInd
                 let attributedString = Utilities.alertAttribute(titleString: "Update Event!")
                 alert.setValue(attributedString, forKey: "attributedTitle")
                 let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
-                    _ = self.navigationController?.popViewController(animated: true)
+                    for controller in self.navigationController!.viewControllers
+                    {
+                        if controller.isKind(of: EventViewController.self)
+                        {
+                            _ = self.navigationController?.popToViewController(controller, animated: true)
+                        }
+                    }
+                    
                 })
                 OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
                 

@@ -9,6 +9,7 @@ class LeadEventTblCell: UITableViewCell {
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblCompanyName: UILabel!
     @IBOutlet weak var imgEvent: UIImageView!
+    @IBOutlet weak var btnCheckmark: UIButton!
     
     
     override func awakeFromNib() {

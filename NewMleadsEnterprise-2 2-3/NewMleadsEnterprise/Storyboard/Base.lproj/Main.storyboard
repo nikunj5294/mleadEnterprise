@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3ol-22-C28">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3ol-22-C28">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,6 @@
         <!--Root View Controller-->
         <scene sceneID="l3w-Fq-xWz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TfD-4E-hiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3ol-22-C28" customClass="RootViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qtj-pa-75h"/>
@@ -24,13 +23,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TfD-4E-hiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1871" y="-690"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="oVd-oO-zjq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Id2-Mf-HqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xan-fN-Jar" customClass="LaunchViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KQ1-Vw-vac"/>
@@ -100,13 +99,13 @@
                         <outlet property="pgSlidePage" destination="hGG-Ma-zmG" id="UjU-aE-V6Y"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Id2-Mf-HqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1871" y="-1388"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="qc8-e4-tY2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oEt-4J-NDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SideMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FYc-rD-YFM" customClass="SideMenuViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mOA-bZ-SAh"/>
@@ -174,7 +173,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="1" reuseIdentifier="CellMenu" rowHeight="49" id="Idu-e4-iXv">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="49"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Idu-e4-iXv" id="cZc-gb-GVA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -235,13 +234,13 @@
                         <outlet property="tblViewMenu" destination="1Lx-JQ-4p5" id="CgI-45-rD5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEt-4J-NDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1124" y="-690.40479760119945"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="B9q-ay-mbO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KM2-QU-U4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="9vb-2H-Fj9" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="G84-x9-HYp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -249,7 +248,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uay-s1-gnE">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uay-s1-gnE" id="C0K-1Z-D0w">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
@@ -264,13 +263,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="xCm-BG-10k"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KM2-QU-U4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="468" y="-1374"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="Glk-IB-aSP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D77-5R-Qdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VKf-dv-aBd" customClass="EventViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JQV-jZ-Edp"/>
@@ -382,7 +381,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" id="LcQ-wz-pq2">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="62.333332061767578"/>
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="62.333332061767578"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LcQ-wz-pq2" id="Eoy-1t-HNu">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="62.333332061767578"/>
@@ -663,13 +662,13 @@
                         <outlet property="tblEventsView" destination="cwI-EJ-9vP" id="VMd-I8-wCe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D77-5R-Qdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1149.5999999999999" y="-1387.5562218890557"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="TJn-e7-DIn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7b6-U2-HgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DashboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C9M-zH-TRK" customClass="DashboardViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BSt-QG-NzR"/>
@@ -948,13 +947,13 @@
                         <segue destination="dHg-iZ-h1t" kind="show" identifier="ReferToFriend" id="0Fo-Jl-Ope"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7b6-U2-HgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="-1386.656671664168"/>
         </scene>
         <!--Hamburguer Navigation Controller-->
         <scene sceneID="YiX-uY-MNg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6e-jM-6tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HomeNevigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eyI-AW-iF1" customClass="DLHamburguerNavigationController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RSF-ap-JhS">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -965,13 +964,13 @@
                         <segue destination="C9M-zH-TRK" kind="relationship" relationship="rootViewController" id="NDK-Cf-KfO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6e-jM-6tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1124" y="-1386"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="qUG-Y4-Zk9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y2r-Oz-kGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J9v-oh-1nd" customClass="LoginViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yfi-kp-UPD"/>
@@ -1412,13 +1411,13 @@
                         <outlet property="viewSubscribeDialog" destination="INw-4L-JrU" id="upk-6h-RDF"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2r-Oz-kGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="-690.88669950738915"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Tvt-hG-L4Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NMd-jx-0s7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wxN-9r-Znf" customClass="SignUpViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2a-cv-0FF"/>
@@ -1796,13 +1795,13 @@
                         <outlet property="txtPhoneNoTextField" destination="Qg0-aH-L4h" id="Sxd-72-QIp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMd-jx-0s7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="468" y="-690.40479760119945"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sp6-hd-raH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f71-EL-i1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y2i-iH-fxw" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uaX-dh-MU8"/>
@@ -2150,13 +2149,13 @@
                         <barButtonItem key="leftBarButtonItem" title="MenuBtn" id="Zs4-BI-xEc"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f71-EL-i1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1345" y="-2939"/>
         </scene>
         <!--Upgrade View Controller-->
         <scene sceneID="QDY-eJ-1Fn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rL8-wZ-UdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="UpgradeViewController" id="Ymg-ja-C1Y" customClass="UpgradeViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="738-dC-5Od"/>
@@ -2234,7 +2233,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellUpgradeData" rowHeight="45" id="oKh-Nd-lUq" customClass="cellUpgradeData" customModule="NewMleadsEnterprise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="45"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oKh-Nd-lUq" id="0Ir-in-Y0F">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
@@ -2298,13 +2297,13 @@
                         <outlet property="viewMemberSelection" destination="odo-AY-mgU" id="zF5-a1-Yts"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rL8-wZ-UdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3538.4000000000001" y="-3037.3313343328336"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Kkd-ek-f0H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zOU-38-gVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cHg-o3-ro2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gf8-iX-9v2"/>
@@ -2335,13 +2334,13 @@
                         <outlet property="webView" destination="fpk-Ca-i4R" id="otb-NU-muH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOU-38-gVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5492" y="-2930"/>
         </scene>
         <!--Add Event View Controller-->
         <scene sceneID="Hfr-eJ-LpU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gNf-gW-hRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddEventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wSf-5L-uOB" customClass="AddEventViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="99e-lU-bIg"/>
@@ -2774,13 +2773,13 @@
                         <outlet property="txtcity" destination="swD-IY-ciq" id="bmv-4C-xGC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNf-gW-hRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2541.5999999999999" y="-1505.9113300492611"/>
         </scene>
         <!--My Lead DetailVC-->
         <scene sceneID="cyF-bs-udr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hAb-w3-u9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MyLeadDetailVC" id="F92-Xy-BOC" customClass="MyLeadDetailVC" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VR1-8m-WAb"/>
@@ -4048,13 +4047,13 @@ INFO</string>
                         <outlet property="viewLeadReserch" destination="red-5N-sxM" id="ken-Ge-Qfr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAb-w3-u9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="-1382"/>
         </scene>
         <!--Events Detail View Controller-->
         <scene sceneID="e8S-wi-znF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqd-iX-wzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EventsDetailViewController" id="Vun-lc-P63" customClass="EventsDetailViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KXH-hu-5ZF"/>
@@ -5016,13 +5015,13 @@ Leads</string>
                         <outlet property="lblEventsState" destination="SW4-HY-sDw" id="YvW-K3-RNG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqd-iX-wzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2516" y="-2239"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="UNA-fn-CbK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gJD-SK-nNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CHZ-Dn-zBu" customClass="AccountViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rQO-yc-kY3"/>
@@ -5037,7 +5036,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="CellAccount" rowHeight="80" id="l5q-83-d5b">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l5q-83-d5b" id="81z-dA-83g">
                                             <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="80"/>
@@ -5100,13 +5099,13 @@ Leads</string>
                         <outlet property="tblView" destination="8Tj-rl-ewQ" id="zyO-Gv-jhb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJD-SK-nNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="440.80000000000001" y="-2075.7121439280363"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sKm-dL-Vw3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uCb-3Q-XML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="E8F-di-Zph" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hke-sy-LgO"/>
@@ -5119,13 +5118,13 @@ Leads</string>
                     </view>
                     <navigationItem key="navigationItem" id="aKe-md-Vnz"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCb-3Q-XML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="-2079"/>
         </scene>
         <!--Speak View Controller-->
         <scene sceneID="yse-N8-glW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dM4-6v-QAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SpeakViewController" id="DrO-jG-9Fj" customClass="SpeakViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F7G-Wm-O0q"/>
@@ -5592,13 +5591,13 @@ Leads</string>
                         <outlet property="viewSpeakSubview" destination="bDU-F9-T0i" id="BHx-Ts-tqM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dM4-6v-QAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3292" y="-2015.0246305418721"/>
         </scene>
         <!--Quick Record View Controller-->
         <scene sceneID="qhg-bl-9vE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ue-bW-nfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QuickRecordViewController" id="fOV-ED-jId" customClass="QuickRecordViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="spt-Vm-3ld"/>
@@ -5822,13 +5821,13 @@ Leads</string>
                         <outlet property="viewRoundedObj" destination="8U1-8M-Pwy" id="4SY-ak-ir9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ue-bW-nfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3956" y="-2102.2167487684728"/>
         </scene>
         <!--Add Lead View Controller-->
         <scene sceneID="aiD-H6-ZW8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NVG-63-uJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddLeadViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d4c-XJ-wd7" customClass="AddLeadViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jaO-zM-FBH"/>
@@ -6182,13 +6181,13 @@ Leads</string>
                     </view>
                     <size key="freeformSize" width="375" height="600"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVG-63-uJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3292" y="-1404.1979010494754"/>
         </scene>
         <!--Refer View Controller-->
         <scene sceneID="WWt-zW-hWp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3wz-YS-cmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="dHg-iZ-h1t" customClass="ReferViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uoi-s3-Afi"/>
@@ -6201,13 +6200,13 @@ Leads</string>
                     </view>
                     <navigationItem key="navigationItem" id="laU-mT-qKW"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wz-YS-cmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1124" y="-2076"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JjK-wW-R5z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4FS-bd-tzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DLV-Kg-68U" customClass="SettingViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qyu-L1-VYd"/>
@@ -6798,13 +6797,13 @@ Leads</string>
                         <outlet property="viewSystemOnline" destination="Uib-GD-sXw" id="EZe-wv-X5f"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4FS-bd-tzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-314.39999999999998" y="-2077.0935960591132"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lbm-ie-GPp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qho-bi-svi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Gkw-FR-dEg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8z9-rq-qB3"/>
@@ -6816,13 +6815,13 @@ Leads</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qho-bi-svi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="-4490"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ROi-zT-Hun">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-Pj-arf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="buD-df-JOa" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xlh-wt-9O0"/>
@@ -7018,13 +7017,13 @@ Leads</string>
                         <outlet property="SuperView" destination="0RT-tJ-Y2B" id="LFm-Rs-Kiy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-Pj-arf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="737" y="-3073"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="cSC-Cs-y7N">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vsd-dH-Grg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="TestViewController" storyboardIdentifier="TestViewController" id="np1-lJ-Aq7" customClass="TestViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zPY-0G-9mh"/>
@@ -7047,7 +7046,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="122" id="PUa-Gu-Rs7">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="122"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PUa-Gu-Rs7" id="Ama-dm-ibx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
@@ -7212,13 +7211,13 @@ Leads</string>
                         <outlet property="tblview" destination="eUW-UQ-BRu" id="0dw-ko-AyO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsd-dH-Grg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1472.8" y="-3035.5322338830588"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="hfd-u3-Hc7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S0n-ur-A02" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ForgotPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rlP-Od-Glx" customClass="ForgotPasswordViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1fh-v6-G27"/>
@@ -7329,13 +7328,13 @@ Leads</string>
                         <outlet property="txtForgotEmailid" destination="aSr-rG-6jQ" id="oOP-9j-JLs"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0n-ur-A02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1230" y="-690"/>
         </scene>
         <!--My Lead View Controller-->
         <scene sceneID="5RV-XZ-8Jd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bSo-Hr-5Ka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="MyLeadViewController" storyboardIdentifier="MyLeadViewController" id="HhE-hf-DmP" customClass="MyLeadViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tdP-eE-z0O"/>
@@ -7411,7 +7410,7 @@ Leads</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="54" id="TCC-Bd-4ff">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="54"/>
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="54"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCC-Bd-4ff" id="J5V-Em-In0">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
@@ -7720,13 +7719,13 @@ Leads</string>
                         <outlet property="tblLeadView" destination="hsg-Xv-CrK" id="W4Q-tM-89u"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSo-Hr-5Ka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2792.8000000000002" y="-690.88669950738915"/>
         </scene>
         <!--Report View Controller-->
         <scene sceneID="b6u-hx-rnY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Axr-dm-2VL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="ReportViewController" storyboardIdentifier="ReportViewController" id="aWM-C1-wbW" customClass="ReportViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b6p-iD-MRu"/>
@@ -7741,7 +7740,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellReport" rowHeight="80" id="5rR-u1-Xug">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5rR-u1-Xug" id="ryf-3O-knD">
                                             <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="80"/>
@@ -7805,13 +7804,13 @@ Leads</string>
                         <outlet property="tblView" destination="Zjl-Rg-GVt" id="wvL-WH-1Z4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Axr-dm-2VL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5804" y="27"/>
         </scene>
         <!--Converted Lead To Customer View Controller-->
         <scene sceneID="SQH-DS-8Ku">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="68g-zF-Ieb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ConvertedLeadToCustomerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7iP-mq-vYW" customClass="ConvertedLeadToCustomerViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eix-QL-Tdb"/>
@@ -7936,13 +7935,13 @@ Leads</string>
                         <outlet property="lblTeamMember" destination="85x-zC-rmk" id="Aqe-K7-nw1"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68g-zF-Ieb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8193" y="707"/>
         </scene>
         <!--Quick Note View Controller-->
         <scene sceneID="D3E-5d-HyF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcm-Xl-d9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QuickNoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E4h-ks-N2a" customClass="QuickNoteViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k9t-vb-AKK"/>
@@ -7954,13 +7953,13 @@ Leads</string>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcm-Xl-d9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7143" y="-636"/>
         </scene>
         <!--Pipe Line View Controller-->
         <scene sceneID="NcF-Og-kR4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kkk-hc-bKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PipeLineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4LM-O6-ZaR" customClass="PipeLineViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2aD-8Q-RoC"/>
@@ -7987,13 +7986,13 @@ Leads</string>
                         <outlet property="containerVirw" destination="x5e-oH-JoG" id="PxR-IQ-ZrF"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkk-hc-bKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8122.3999999999996" y="-630.13493253373315"/>
         </scene>
         <!--Email Statistics View Controller-->
         <scene sceneID="z08-M6-cLH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YDF-A0-VUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EmailStatisticsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R6p-d8-klz" customClass="EmailStatisticsViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ETC-cV-dnG"/>
@@ -8008,7 +8007,7 @@ Leads</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmailCell" rowHeight="60" id="77b-HI-GWd">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="77b-HI-GWd" id="AsJ-mG-jfK">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -8369,13 +8368,13 @@ Leads</string>
                         <outlet property="tableView" destination="DkH-Ei-5D4" id="nrb-7s-znT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDF-A0-VUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7816.8000000000002" y="28.335832083958024"/>
         </scene>
         <!--Sales Cycle Report Detail View Controller-->
         <scene sceneID="iyO-JA-5am">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ei-Tq-3Bj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SalesCycleReportDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O9c-bE-eMn" customClass="SalesCycleReportDetailViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6gq-VM-Fzv"/>
@@ -8520,13 +8519,13 @@ Leads</string>
                         <outlet property="lblNumberOfLeads" destination="9GT-E8-8aG" id="G2e-Xt-DFW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ei-Tq-3Bj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8840.7999999999993" y="705.69715142428788"/>
         </scene>
         <!--Converted Lead To Custom Detail View Controller-->
         <scene sceneID="QNH-YG-s1m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qjQ-So-hUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ConvertedLeadToCustomDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VCK-gh-yoU" customClass="ConvertedLeadToCustomDetailViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1y7-wV-ELz"/>
@@ -8660,13 +8659,13 @@ Leads</string>
                         <outlet property="lblNumberOfLead" destination="iD5-zK-AKE" id="H3z-zq-S9C"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjQ-So-hUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8840.7999999999993" y="1362.3688155922041"/>
         </scene>
         <!--Common Web View Controller-->
         <scene sceneID="ufz-8A-uMN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b33-GS-eaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CommonWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HYw-dn-tRh" customClass="CommonWebViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3iN-EY-ytL"/>
@@ -8697,13 +8696,13 @@ Leads</string>
                         <outlet property="WebView" destination="tAb-HJ-sxy" id="TCj-g5-JBU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b33-GS-eaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9477.6000000000004" y="706.59670164917543"/>
         </scene>
         <!--Add Lead Group View Controller-->
         <scene sceneID="79k-zf-taN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="deD-Rd-abg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddLeadGroupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cha-aX-hMn" customClass="AddLeadGroupViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Ig-ep-Mig"/>
@@ -9020,13 +9019,13 @@ Leads</string>
                         <outlet property="txtPurpose" destination="jxQ-mk-M99" id="NFU-t9-age"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deD-Rd-abg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2956" y="89.955022488755631"/>
         </scene>
         <!--Lead Group View Controller-->
         <scene sceneID="8OP-t0-IZ4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8GV-pz-bNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LeadGroupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TLu-WH-eY0" customClass="LeadGroupViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JlR-Hj-2AK"/>
@@ -9041,7 +9040,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="61" id="pDA-Hq-aeU">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pDA-Hq-aeU" id="kaq-Pm-tJB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
@@ -9372,13 +9371,13 @@ Leads</string>
                         <outlet property="tableView" destination="bB6-gb-Q0G" id="3x3-oW-O30"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GV-pz-bNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3700" y="29.23538230884558"/>
         </scene>
         <!--Team Management And Reset Password View Controller-->
         <scene sceneID="c5V-dz-Vzk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sio-IQ-3ka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TeamManagementAndResetPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iCc-gL-AVh" customClass="TeamManagementAndResetPasswordViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g5F-FP-77x"/>
@@ -9393,7 +9392,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="16h-lp-JJ8" customClass="ResetAndTeamMemberCell" customModule="NewMleadsEnterprise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="16h-lp-JJ8" id="5vN-ja-KQl">
                                             <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="80"/>
@@ -9450,13 +9449,13 @@ Leads</string>
                         <outlet property="tblView" destination="vxE-cX-UXv" id="bF3-5N-29U"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sio-IQ-3ka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5260" y="-1982"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="iTV-fc-aHK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u2F-Iq-gWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Q8-KX-ivm" customClass="ProfileViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vLA-Pu-c7g"/>
@@ -10233,13 +10232,13 @@ Leads</string>
                         <outlet property="txtZipCode" destination="r1z-DI-whB" id="PsW-EU-n2i"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2F-Iq-gWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6026" y="-1983"/>
         </scene>
         <!--Password Reset View Controller-->
         <scene sceneID="KfS-cw-K2g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C1T-li-TJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PasswordResetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wbo-uj-KJD" customClass="PasswordResetViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z2b-He-WF6"/>
@@ -10406,13 +10405,13 @@ Leads</string>
                         <outlet property="txtNewPassword" destination="e92-Qc-jKc" id="cxk-zZ-dJW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1T-li-TJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6831" y="-2115"/>
         </scene>
         <!--Manage Export Ability View Controller-->
         <scene sceneID="mLf-vL-0Tm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tu0-EG-ssV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="ManageExportAbilityViewController" storyboardIdentifier="ManageExportAbilityViewController" id="c3q-vS-pie" customClass="ManageExportAbilityViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BSV-Bp-pSU"/>
@@ -10427,7 +10426,7 @@ Leads</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ManageCell" id="5nE-AR-aSc">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="40.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="40.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nE-AR-aSc" id="wSQ-1z-QPY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40.333332061767578"/>
@@ -10479,13 +10478,13 @@ Leads</string>
                         <outlet property="tableView" destination="d5k-5L-wCj" id="Uci-jN-drM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tu0-EG-ssV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6202" y="-1201"/>
         </scene>
         <!--Video Presentation View Controller-->
         <scene sceneID="uAH-gm-gab">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TZA-n2-JKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VideoPresentationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BeH-cZ-oYx" customClass="VideoPresentationViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fbx-6N-TZL"/>
@@ -10501,7 +10500,7 @@ Leads</string>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoProfile" id="LIS-bq-8UF">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="40.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="40.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LIS-bq-8UF" id="3w9-bY-rd0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40.333332061767578"/>
@@ -10667,13 +10666,13 @@ Leads</string>
                         <outlet property="tableView" destination="3MQ-i4-kI2" id="Ynh-dm-xg3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZA-n2-JKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6936.8000000000002" y="-1381.2593703148427"/>
         </scene>
         <!--Video View Detail View Controller-->
         <scene sceneID="vyi-fH-R89">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Se1-nd-R3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VideoViewDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y3G-ME-g9t" customClass="VideoViewDetailViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KDZ-Fi-n9r"/>
@@ -10844,13 +10843,13 @@ Leads</string>
                         <outlet property="lblVideoName" destination="Lwh-cU-D0v" id="xBI-Tj-04l"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Se1-nd-R3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7608.8000000000002" y="-1381.2593703148427"/>
         </scene>
         <!--Add Video Profile View Controller-->
         <scene sceneID="8OQ-Uv-HBb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfD-ax-BA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddVideoProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U22-Kh-DvK" customClass="AddVideoProfileViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zze-qc-wXe"/>
@@ -10946,13 +10945,13 @@ Leads</string>
                         <outlet property="txtVideoName" destination="138-87-66C" id="Dgu-8r-0ak"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfD-ax-BA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8317.6000000000004" y="-1381.2593703148427"/>
         </scene>
         <!--Add Team Member View Controller-->
         <scene sceneID="Ke9-xf-k9C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rxg-lU-soe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="AddTeamMemberViewController" storyboardIdentifier="AddTeamMemberViewController" id="xd4-TU-4XJ" customClass="AddTeamMemberViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Y0-R0-WMe"/>
@@ -11268,13 +11267,13 @@ Leads</string>
                         <outlet property="txtReTypeEmail" destination="NFO-mK-w2o" id="QBS-Xh-MYN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxg-lU-soe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7524" y="-2099"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="daC-i8-b75">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="70z-5U-KUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pdt-a5-WEd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sar-sC-1yS"/>
@@ -11538,13 +11537,13 @@ Leads</string>
                         <outlet property="containerView" destination="hHL-wE-wol" id="h62-hH-eHS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70z-5U-KUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7065" y="-3235"/>
         </scene>
         <!--Scheduled Task Detail View Controller-->
         <scene sceneID="ebE-hn-Cgc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fc1-It-bPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScheduledTaskDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JUa-8Q-mag" customClass="ScheduledTaskDetailViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6AO-FT-QQO"/>
@@ -11995,13 +11994,13 @@ Leads</string>
                         <outlet property="lblSubject" destination="ICm-iR-UWR" id="9yi-2R-iQN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fc1-It-bPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5538" y="766"/>
         </scene>
         <!--Team Management View Controller-->
         <scene sceneID="fWb-Il-5yE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfn-3Q-JnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="TeamManagementViewController" storyboardIdentifier="TeamManagementViewController" id="X5J-60-ALH" customClass="TeamManagementViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sRd-7K-nkm"/>
@@ -12016,7 +12015,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamMember" rowHeight="50" id="Ybe-b6-RqZ">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ybe-b6-RqZ" id="stM-RM-e8K">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -12091,13 +12090,13 @@ Leads</string>
                         <outlet property="tblView" destination="TY7-MB-lFD" id="g1x-PI-P5i"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfn-3Q-JnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8193" y="-2114"/>
         </scene>
         <!--Subscription Pop Up View Controller-->
         <scene sceneID="0eO-ag-R8c">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TDU-Sj-hU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SubscriptionPopUpViewController" id="IpL-u4-W5j" customClass="SubscriptionPopUpViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="12h-Dq-wQV"/>
@@ -12249,13 +12248,13 @@ Leads</string>
                         <outlet property="imgSelectedDontshowAgain" destination="0YC-sG-WNh" id="h6a-7q-Hvz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDU-Sj-hU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1871" y="-16"/>
         </scene>
         <!--Image Profile View Controller-->
         <scene sceneID="M88-03-2b9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hOH-Nh-ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ImageProfileViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0FV-jd-f1M" customClass="ImageProfileViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EBN-vr-4No"/>
@@ -12354,13 +12353,13 @@ Leads</string>
                         <outlet property="btnShowProfile" destination="sJ6-w6-MNK" id="0dc-9r-Bcr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOH-Nh-ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1124" y="-16"/>
         </scene>
         <!--Show Profile View Controller-->
         <scene sceneID="Lqh-dG-XzG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aGk-be-Lkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ShowProfileViewController" id="Ixj-a1-ujt" customClass="ShowProfileViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jGI-FG-hwa"/>
@@ -12399,13 +12398,13 @@ Leads</string>
                         <outlet property="imgProfileObj" destination="gPR-xj-ueY" id="bWM-xG-Tjk"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGk-be-Lkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1146" y="634"/>
         </scene>
         <!--Linked In View Controller-->
         <scene sceneID="7z6-HM-8qh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2YJ-vU-BjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LinkedInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yL4-s5-CEA" customClass="LinkedInViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mQS-wi-Q63"/>
@@ -12476,13 +12475,13 @@ Leads</string>
                         <outlet property="webView" destination="Ky0-e8-TZI" id="lAn-Dh-MQx"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2YJ-vU-BjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="-16.641679160419791"/>
         </scene>
         <!--Scan Business Lead View Controller-->
         <scene sceneID="7ye-py-eeX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1fM-E9-48R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScanBusinessLeadViewController" id="0EE-eR-CYb" customClass="ScanBusinessLeadViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="66X-Mo-DZQ"/>
@@ -13176,13 +13175,13 @@ Leads</string>
                         <outlet property="txtPhoneNumber" destination="qWj-YR-kuL" id="z4P-ho-qyC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fM-E9-48R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5164" y="2645"/>
         </scene>
         <!--Add Address View Controller-->
         <scene sceneID="hSm-iA-g0a">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mJ0-w1-0Gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddAddressViewController" id="Y6X-Ia-5wh" customClass="AddAddressViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="445-aS-WQa"/>
@@ -13392,13 +13391,13 @@ Leads</string>
                         <outlet property="txtZipcode" destination="8oU-St-xod" id="Ikk-WN-GWL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJ0-w1-0Gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6633" y="2645"/>
         </scene>
         <!--Dashboard Report View Controller-->
         <scene sceneID="z6r-k6-4FN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JuP-Gh-wEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DashboardReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Di9-4I-ROQ" customClass="DashboardReportViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RQt-o2-U2B"/>
@@ -13429,13 +13428,13 @@ Leads</string>
                         <outlet property="webView" destination="icH-EA-iXT" id="bYq-mv-TUH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuP-Gh-wEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4678" y="-1265"/>
         </scene>
         <!--Code View Controller-->
         <scene sceneID="VQL-uG-N3S">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HYM-eL-oPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QRCodeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bup-jt-JBe" customClass="QRCodeViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VdT-Rj-psa"/>
@@ -13463,13 +13462,13 @@ Leads</string>
                         <outlet property="imgQRCode" destination="vGP-Ot-OgS" id="JaY-vk-CTq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYM-eL-oPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5471.1999999999998" y="-1141.0794602698652"/>
         </scene>
         <!--Scheduled Meeting View Controller-->
         <scene sceneID="kpt-FT-YKC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jU5-rg-88U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScheduledMeetingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0l7-k7-mUZ" customClass="ScheduledMeetingViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jjk-Zq-aB8"/>
@@ -13484,7 +13483,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="158" id="m2M-qg-6cC">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="158"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m2M-qg-6cC" id="P5Z-IJ-4fZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
@@ -13747,13 +13746,13 @@ Leads</string>
                         <outlet property="tblSchedulMeeting" destination="1L4-sW-JLt" id="ICE-q3-xsD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jU5-rg-88U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7170.3999999999996" y="26.53673163418291"/>
         </scene>
         <!--Leadby Lead Qulalifier View Controller-->
         <scene sceneID="fMj-Ch-Vm8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6JW-96-X1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LeadbyLeadQulalifierViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rye-OB-yBv" customClass="LeadbyLeadQulalifierViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cJ9-wV-qI8"/>
@@ -13879,13 +13878,13 @@ Leads</string>
                         <outlet property="lblTeamMember" destination="Zwd-YR-lvc" id="Aww-Qi-ktx"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6JW-96-X1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9770" y="29"/>
         </scene>
         <!--Product Intrestby Percentage View Controller-->
         <scene sceneID="aTs-r9-FUX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dgK-HT-ehI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProductIntrestbyPercentageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Emh-7e-Csh" customClass="ProductIntrestbyPercentageViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qs4-b4-t5j"/>
@@ -14010,13 +14009,13 @@ Leads</string>
                         <outlet property="lblTeamMember" destination="whY-zc-bZV" id="jAp-Eq-ioe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgK-HT-ehI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8471" y="29"/>
         </scene>
         <!--Sales Cycle Report View Controller-->
         <scene sceneID="a9V-ii-Sfa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xbx-0m-lEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SalesCycleReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hv0-oB-5JQ" customClass="SalesCycleReportViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="454-rq-5VM"/>
@@ -14141,13 +14140,13 @@ Leads</string>
                         <outlet property="lblTeamMember" destination="tOc-K9-Bwe" id="Nsz-Sk-VJX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbx-0m-lEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9132" y="28.335832083958024"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tKT-65-wpd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AR8-qs-LJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="b63-I2-uPy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X7n-Ah-bSp"/>
@@ -14580,13 +14579,13 @@ Leads</string>
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AR8-qs-LJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5927" y="1691"/>
         </scene>
         <!--Voice Memo View Controller-->
         <scene sceneID="xYz-gV-OSj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kcq-3v-sdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VoiceMemoViewController" id="DDo-rE-LDq" customClass="VoiceMemoViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hIf-An-q3w"/>
@@ -14732,13 +14731,13 @@ Leads</string>
                         <outlet property="viewRoundedObj" destination="khh-3V-FPb" id="Jnn-wJ-KGi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kcq-3v-sdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5917.6000000000004" y="2575.8620689655172"/>
         </scene>
         <!--Scheduled Meeting Detail View Controller-->
         <scene sceneID="wwe-x7-hSd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pgc-WH-Jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScheduledMeetingDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARp-NZ-9Bn" customClass="ScheduledMeetingDetailViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TVz-W7-QLn"/>
@@ -15240,13 +15239,13 @@ Leads</string>
                         <outlet property="txtNote" destination="IFt-Bk-h5G" id="iI9-ag-qMB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgc-WH-Jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6229.6000000000004" y="765.51724137931035"/>
         </scene>
         <!--Sales Report View Controller-->
         <scene sceneID="6MH-OH-EBW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7HD-Tu-I1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SalesReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JPs-P0-xd3" customClass="SalesReportViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BzO-lW-2m0"/>
@@ -15332,13 +15331,13 @@ Leads</string>
                         <outlet property="lblTeamMember" destination="QP9-a8-JeF" id="K7y-xe-jea"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7HD-Tu-I1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6873" y="707"/>
         </scene>
         <!--Pipeline Sales Report View Controller-->
         <scene sceneID="dKY-Uw-pN1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2WX-1y-ywR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PipelineSalesReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hBJ-gz-6BD" customClass="PipelineSalesReportViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qmJ-fx-SWK"/>
@@ -15424,13 +15423,13 @@ Leads</string>
                         <outlet property="lblTeamMember" destination="SI0-SR-nsm" id="uQR-gv-HWe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2WX-1y-ywR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7529" y="707"/>
         </scene>
         <!--Follow Ups My LeadVC-->
         <scene sceneID="Y6A-ex-Sx2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yob-a2-eGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Follow_UpsMyLeadVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zg6-ye-FJe" customClass="Follow_UpsMyLeadVC" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eRh-Hl-jB0"/>
@@ -15481,7 +15480,7 @@ Leads</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Follow_UpsMyLeadVCDataCell" id="uRy-I3-DWd" customClass="Follow_UpsMyLeadVCDataCell" customModule="NewMleadsEnterprise" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="62.333332061767578"/>
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="62.333332061767578"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uRy-I3-DWd" id="FTh-Si-Oe0">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="62.333332061767578"/>
@@ -15761,13 +15760,13 @@ Leads</string>
                         <outlet property="viewFiltter" destination="iaO-t5-Yqo" id="irG-VE-QDD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yob-a2-eGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3538" y="-636"/>
         </scene>
         <!--Add Notes View Controller-->
         <scene sceneID="RXj-gj-yIF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BfM-j2-RNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddNotesViewController" id="Ssp-sd-vxt" customClass="AddNotesViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9wt-qR-DbX"/>
@@ -15872,13 +15871,13 @@ Leads</string>
                         <outlet property="viewNotesObj" destination="6sQ-mg-hKh" id="c0W-ad-7I4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfM-j2-RNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7310" y="2645"/>
         </scene>
         <!--Survey Questionnaire View Controller-->
         <scene sceneID="Oas-mw-l07">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BSM-UT-C4u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SurveyQuestionnaireViewController" id="29o-px-f1J" customClass="SurveyQuestionnaireViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5wY-5X-J3H"/>
@@ -16744,13 +16743,13 @@ Leads</string>
                         <outlet property="stacktimeFrame" destination="7ea-nA-V8x" id="weq-eV-pdk"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSM-UT-C4u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7991" y="2645"/>
         </scene>
         <!--Sales Opportunity View Controller-->
         <scene sceneID="cGa-2z-O79">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cdI-NI-b1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SalesOpportunityViewController" id="QyZ-ra-XSD" customClass="SalesOpportunityViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iaM-uZ-G5K"/>
@@ -17110,13 +17109,13 @@ Leads</string>
                         <outlet property="txtTargetFuture" destination="uqF-S1-hev" id="y0e-Uq-wRe"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdI-NI-b1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8674" y="2645"/>
         </scene>
         <!--Followup Actions View Controller-->
         <scene sceneID="RjF-O9-ndX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4vk-ty-hCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FollowupActionsViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CQl-Hs-bRN" customClass="FollowupActionsViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MNU-xR-x3K"/>
@@ -17318,13 +17317,13 @@ Leads</string>
                         <outlet property="imgSMSObj" destination="AvR-Bw-MyL" id="fIY-6R-dT1"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vk-ty-hCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5160.8000000000002" y="3416.7487684729067"/>
         </scene>
         <!--Quick Recorded View Controller-->
         <scene sceneID="L6m-UL-gc8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mIt-PX-Kb8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QuickRecordedViewController" id="p1o-2F-VW8" customClass="QuickRecordedViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xSX-Ne-hYz"/>
@@ -17419,13 +17418,13 @@ Leads</string>
                         <outlet property="viewRoundedObj" destination="ke0-oM-7Vx" id="Bad-98-DvF"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIt-PX-Kb8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4586" y="-2102"/>
         </scene>
         <!--Edit Scan Lead View Controller-->
         <scene sceneID="ukY-WH-vRZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6N5-4R-3vL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EditScanLeadViewController" id="33J-WE-59n" customClass="EditScanLeadViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0mg-Ve-URC"/>
@@ -18113,13 +18112,13 @@ Leads</string>
                         <outlet property="txtPhoneNumber" destination="O8t-Zq-mHn" id="3kA-bR-abq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6N5-4R-3vL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5926" y="3330"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="JcN-SS-LJN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AOP-Nz-Keg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pck-5X-2i8" customClass="AddViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nZt-Nt-mii"/>
@@ -18379,6 +18378,7 @@ Leads</string>
                         <outlet property="viewSubObj" destination="iL8-ho-78C" id="MNQ-7w-d5t"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOP-Nz-Keg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2012" y="-690.14778325123154"/>
         </scene>
@@ -18514,7 +18514,7 @@ Leads</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="EventCell" id="f3a-dl-wyd">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="62.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="62.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f3a-dl-wyd" id="Ymz-Os-agy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="62.333332061767578"/>
@@ -18829,6 +18829,60 @@ Leads</string>
             </objects>
             <point key="canvasLocation" x="6524" y="28.078817733990149"/>
         </scene>
+        <!--Delete Lead View Controller-->
+        <scene sceneID="BQj-6m-gpf">
+            <objects>
+                <viewController restorationIdentifier="DeleteLeadViewController" storyboardIdentifier="DeleteLeadViewController" id="xvn-ct-002" customClass="DeleteLeadViewController" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hgD-Eb-6qZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GIs-zx-mU9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsE-UW-4Ax">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geK-TS-5Zh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJl-Ek-sDX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="xvn-ct-002" id="ZcU-rz-qGe"/>
+                                            <outlet property="delegate" destination="xvn-ct-002" id="fqv-jc-hXw"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JJl-Ek-sDX" secondAttribute="trailing" id="8bu-dt-a3D"/>
+                                    <constraint firstAttribute="trailing" secondItem="JJl-Ek-sDX" secondAttribute="trailing" id="SUM-8o-ddt"/>
+                                    <constraint firstItem="JJl-Ek-sDX" firstAttribute="leading" secondItem="geK-TS-5Zh" secondAttribute="leading" id="UHL-s1-GY3"/>
+                                    <constraint firstAttribute="trailing" secondItem="JJl-Ek-sDX" secondAttribute="trailing" id="fNx-cb-1wf"/>
+                                    <constraint firstItem="JJl-Ek-sDX" firstAttribute="top" secondItem="geK-TS-5Zh" secondAttribute="top" id="ka2-tJ-7tQ"/>
+                                    <constraint firstItem="JJl-Ek-sDX" firstAttribute="leading" secondItem="geK-TS-5Zh" secondAttribute="leading" id="mNv-Y1-6Up"/>
+                                    <constraint firstItem="JJl-Ek-sDX" firstAttribute="leading" secondItem="geK-TS-5Zh" secondAttribute="leading" id="rFS-kj-ber"/>
+                                    <constraint firstAttribute="bottom" secondItem="JJl-Ek-sDX" secondAttribute="bottom" id="zdu-01-yWl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="geK-TS-5Zh" firstAttribute="top" secondItem="hgD-Eb-6qZ" secondAttribute="bottom" id="5Jp-6E-lV7"/>
+                            <constraint firstItem="geK-TS-5Zh" firstAttribute="leading" secondItem="fsE-UW-4Ax" secondAttribute="leading" id="NkD-pf-RE1"/>
+                            <constraint firstItem="geK-TS-5Zh" firstAttribute="trailing" secondItem="fsE-UW-4Ax" secondAttribute="trailing" id="QLc-j7-ajR"/>
+                            <constraint firstItem="geK-TS-5Zh" firstAttribute="bottom" secondItem="GIs-zx-mU9" secondAttribute="top" id="trQ-EE-xmf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w1n-Fa-4vd"/>
+                    <connections>
+                        <outlet property="tblLeadView" destination="JJl-Ek-sDX" id="RJt-8e-kIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeW-6c-eNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4250" y="-567"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="138-87-66C">
@@ -18847,10 +18901,10 @@ Leads</string>
             <size key="intrinsicContentSize" width="115" height="17"/>
         </designable>
         <designable name="5fT-Lo-rJq">
-            <size key="intrinsicContentSize" width="72.333333333333329" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="72.333333333333329" height="25"/>
         </designable>
         <designable name="9hZ-3S-73H">
-            <size key="intrinsicContentSize" width="44.666666666666664" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="44.666666666666664" height="25"/>
         </designable>
         <designable name="CnR-ER-rOj">
             <size key="intrinsicContentSize" width="263" height="23.333333333333332"/>
@@ -18859,7 +18913,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="117.66666666666667" height="17"/>
         </designable>
         <designable name="HJB-20-AS3">
-            <size key="intrinsicContentSize" width="104" height="22"/>
+            <size key="intrinsicContentSize" width="104" height="21"/>
         </designable>
         <designable name="HNo-sB-WjK">
             <size key="intrinsicContentSize" width="34" height="18.666666666666668"/>
@@ -18883,7 +18937,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="69" height="18.666666666666668"/>
         </designable>
         <designable name="PSO-RQ-iId">
-            <size key="intrinsicContentSize" width="111.33333333333333" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="111.33333333333333" height="25"/>
         </designable>
         <designable name="Qg0-aH-L4h">
             <size key="intrinsicContentSize" width="96.666666666666671" height="18.666666666666668"/>
@@ -18928,7 +18982,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="94.666666666666671" height="17"/>
         </designable>
         <designable name="fJf-2b-qOZ">
-            <size key="intrinsicContentSize" width="130.66666666666666" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="130.66666666666666" height="25"/>
         </designable>
         <designable name="gYf-ry-bSC">
             <size key="intrinsicContentSize" width="225.33333333333334" height="19.666666666666668"/>
@@ -18943,7 +18997,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="117.33333333333333" height="18.666666666666668"/>
         </designable>
         <designable name="jxQ-mk-M99">
-            <size key="intrinsicContentSize" width="63.666666666666664" height="22"/>
+            <size key="intrinsicContentSize" width="63.666666666666664" height="21"/>
         </designable>
         <designable name="k1N-sM-MXu">
             <size key="intrinsicContentSize" width="80.333333333333329" height="19.666666666666668"/>
@@ -18952,16 +19006,16 @@ Leads</string>
             <size key="intrinsicContentSize" width="43.333333333333336" height="18.666666666666668"/>
         </designable>
         <designable name="mdn-98-wgX">
-            <size key="intrinsicContentSize" width="67.666666666666671" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="67.666666666666671" height="25"/>
         </designable>
         <designable name="oof-aY-quH">
-            <size key="intrinsicContentSize" width="70.333333333333329" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="70.333333333333329" height="25"/>
         </designable>
         <designable name="r1z-DI-whB">
             <size key="intrinsicContentSize" width="59" height="18.666666666666668"/>
         </designable>
         <designable name="swD-IY-ciq">
-            <size key="intrinsicContentSize" width="33.666666666666664" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="33.666666666666664" height="25"/>
         </designable>
         <designable name="trB-oY-bSo">
             <size key="intrinsicContentSize" width="70" height="18.666666666666668"/>
@@ -18979,7 +19033,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="41" height="18.666666666666668"/>
         </designable>
         <designable name="xeC-i8-iSL">
-            <size key="intrinsicContentSize" width="95.333333333333329" height="22"/>
+            <size key="intrinsicContentSize" width="95.333333333333329" height="21"/>
         </designable>
         <designable name="ybe-0d-2B8">
             <size key="intrinsicContentSize" width="81" height="19.666666666666668"/>
@@ -18988,7 +19042,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="195" height="19.666666666666668"/>
         </designable>
         <designable name="z4x-XI-xQl">
-            <size key="intrinsicContentSize" width="118" height="22"/>
+            <size key="intrinsicContentSize" width="118" height="21"/>
         </designable>
     </designables>
     <color key="tintColor" red="0.0078431372550000003" green="0.6588235294" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

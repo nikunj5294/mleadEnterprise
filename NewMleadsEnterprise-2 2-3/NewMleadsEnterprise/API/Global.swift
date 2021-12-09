@@ -127,7 +127,7 @@ var GET_LEAD_BYMAP_KEY  = "getLeadByMap.php"
 var GET_LEAD_BY_ID_API_URL = "getLeadDetail.php"
 
 var EDIT_LEAD_API_URL = "updateLeadPost.php"
-
+var GET_LEADLIST_EVENTWISE  = "getEventWiseLeadList.php"
 
 //Ajay
 struct AppColor {

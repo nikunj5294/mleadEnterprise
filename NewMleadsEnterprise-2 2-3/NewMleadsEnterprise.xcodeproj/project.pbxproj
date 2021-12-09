@@ -59,6 +59,7 @@
 		99F7EF1F227AD2AD00D03D1E /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F7EF1E227AD2AD00D03D1E /* RoundedView.swift */; };
 		99F9647A228EC13D0024F2AC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F96479228EC13D0024F2AC /* AccountViewController.swift */; };
 		99F9B97522572D5000F9E6B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9B97422572D5000F9E6B9 /* LoginViewController.swift */; };
+		B222AB7327623E080036CF71 /* DeleteLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */; };
 		D5B5961DCCC214F86FF7B701 /* Pods_NewMleadsEnterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752D2B1AF5DE26AF1C0F8B1F /* Pods_NewMleadsEnterprise.framework */; };
 		E90A373125728597004A2275 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90A373025728597004A2275 /* Setting.storyboard */; };
 		E90A373425728C79004A2275 /* MoreInfoAboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */; };
@@ -239,6 +240,7 @@
 		99F7EF1E227AD2AD00D03D1E /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		99F96479228EC13D0024F2AC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		99F9B97422572D5000F9E6B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLeadViewController.swift; sourceTree = "<group>"; };
 		E90A373025728597004A2275 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoAboutUs.swift; sourceTree = "<group>"; };
 		E92631BC25EB843D00A42ED8 /* CreateSetupMeetingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSetupMeetingVC.swift; sourceTree = "<group>"; };
@@ -638,6 +640,14 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		B222AB6F27623DA80036CF71 /* DeleteLeadViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */,
+			);
+			path = DeleteLeadViewController;
+			sourceTree = "<group>";
+		};
 		DEF7745CB97755A01E9DCAA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -988,6 +998,7 @@
 		F19D5FD522D079D900362BA0 /* MyLeadVewController */ = {
 			isa = PBXGroup;
 			children = (
+				B222AB6F27623DA80036CF71 /* DeleteLeadViewController */,
 				3E54695D275C826000938E1B /* SalesOpportunityListViewController */,
 				3EF17858275BDA4900BEA37F /* LeadFollowUpsViewController */,
 				046848BC27424EA200F7E902 /* EditLeadViewController */,
@@ -1348,6 +1359,7 @@
 				F1132ABC23DAE1CD00367B6B /* CardViewRadius.swift in Sources */,
 				E941CBEE257A9C7E00BF6C3D /* SystemOptionProductQualifier.swift in Sources */,
 				990AE549229589E9005C467F /* AddViewController.swift in Sources */,
+				B222AB7327623E080036CF71 /* DeleteLeadViewController.swift in Sources */,
 				48503CE125E28DFE00A929D7 /* CreateTaskListing.swift in Sources */,
 				F10191612357531F00F92810 /* SalesReportViewController.swift in Sources */,
 				E9FFB4092573B48F003651ED /* MoreInfoPrivacyPolicy.swift in Sources */,
@@ -1609,7 +1621,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YYT8GHSLCG;
+				DEVELOPMENT_TEAM = CVFN5PNPL7;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1628,7 +1640,7 @@
 					"$(PROJECT_DIR)/NewMleadsEnterprise/Library/LinkedInSDK",
 					"$(PROJECT_DIR)/NewMleadsEnterprise/Library/ZBarSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Tri-Force.NewMleadsEnterprise";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eleorex.testapp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewMleadsEnterprise/Support/NewMleadsEnterprise-Bridging-Header.h";
@@ -1648,7 +1660,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YYT8GHSLCG;
+				DEVELOPMENT_TEAM = CVFN5PNPL7;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1667,7 +1679,7 @@
 					"$(PROJECT_DIR)/NewMleadsEnterprise/Library/LinkedInSDK",
 					"$(PROJECT_DIR)/NewMleadsEnterprise/Library/ZBarSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Tri-Force.NewMleadsEnterprise";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eleorex.testapp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewMleadsEnterprise/Support/NewMleadsEnterprise-Bridging-Header.h";
