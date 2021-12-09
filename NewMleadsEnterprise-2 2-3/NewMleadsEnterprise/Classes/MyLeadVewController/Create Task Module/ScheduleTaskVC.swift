@@ -177,7 +177,71 @@ class ScheduleTaskVC: UIViewController, NVActivityIndicatorViewable {
          "updated_timestamp" : "",
          "reminderTime" : ""
          */
-        
+        if (txtSubject.text?.isBlank)!
+                {
+                    print("Please Enter Subject")
+                    let alert = UIAlertController(title: "", message: "Please Enter Subject",  preferredStyle: .alert)
+                    let attributedString = Utilities.alertAttribute(titleString: "Schedule Task")
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                    
+                    alert.addAction(OKAction)
+                    present(alert,animated: true,completion: nil)
+                    return
+                }
+                else if (txtStartdate.text?.isBlank)!
+                {
+                    print("Please Enter Star date")
+                    let alert = UIAlertController(title: "", message: "Please Enter Start date",  preferredStyle: .alert)
+                    let attributedString = Utilities.alertAttribute(titleString: "Schedule Task")
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                    
+                    alert.addAction(OKAction)
+                    present(alert,animated: true,completion: nil)
+                    return
+                }
+                else if (txtEnddate.text?.isBlank)!
+                {
+                    print("Please Enter End date")
+                    let alert = UIAlertController(title: "", message: "Please Enter End date",  preferredStyle: .alert)
+                    let attributedString = Utilities.alertAttribute(titleString: "Schedule Task")
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                    
+                    alert.addAction(OKAction)
+                    present(alert,animated: true,completion: nil)
+                    return
+                }
+                else if (txtstatus.text?.isBlank)!
+                {
+                    print("Please Select Status")
+                    let alert = UIAlertController(title: "", message: "Please Select Status",  preferredStyle: .alert)
+                    let attributedString = Utilities.alertAttribute(titleString: "Schedule Task")
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                    
+                    alert.addAction(OKAction)
+                    present(alert,animated: true,completion: nil)
+                    return
+                }
+                else if (txtPriority.text?.isBlank)!
+                {
+                    print("Please Select Priority")
+                    let alert = UIAlertController(title: "", message: "Please Select Priority",  preferredStyle: .alert)
+                    let attributedString = Utilities.alertAttribute(titleString: "Schedule Task")
+                    alert.setValue(attributedString, forKey: "attributedTitle")
+                    let OKAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                    
+                    alert.addAction(OKAction)
+                    present(alert,animated: true,completion: nil)
+                    return
+                }
         if isEdit{
             let createdTimeStamp = taskList?.created_timestamp ?? taskData["created_timestamp"] as? String ?? ""
             let dictAPI = ["created_timestamp" : createdTimeStamp,
