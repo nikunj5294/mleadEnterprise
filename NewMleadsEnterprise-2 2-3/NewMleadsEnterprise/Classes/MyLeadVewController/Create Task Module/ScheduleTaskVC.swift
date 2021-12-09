@@ -58,9 +58,11 @@ class ScheduleTaskVC: UIViewController, NVActivityIndicatorViewable {
     var strLeadID = ""
     var strType = "L"
     var objLeadList = LeadList()
-    
+    var selectedEventObj: EventDetail =  EventDetail()
+
     var taskData = [String:Any]()
     var isEdit = false
+    var taskList:TaskList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,11 +94,11 @@ class ScheduleTaskVC: UIViewController, NVActivityIndicatorViewable {
          */
         
         if isEdit{
-            txtSubject.text = taskData["subject"] as? String ?? ""
+            txtSubject.text = taskList?.subject ?? taskData["subject"] as? String ?? ""
             
             for i in 0..<statusData.count - 1{
                 let dataObj = statusData[i]
-                if dataObj["id"] == taskData["statusId"] as? String ?? ""{
+                if dataObj["id"] == taskList?.statusId ?? taskData["statusId"] as? String ?? ""{
                     txtstatus.text = dataObj["value"]
                     selectedIndexForStatus = i
                 }
@@ -105,26 +107,26 @@ class ScheduleTaskVC: UIViewController, NVActivityIndicatorViewable {
           
             for i in 0..<priorityData.count - 1{
                 let dataObj = priorityData[i]
-                if dataObj["id"] == taskData["priorityId"] as? String ?? ""{
+                if dataObj["id"] == taskList?.priorityId ?? taskData["priorityId"] as? String ?? ""{
                     txtPriority.text = dataObj["value"]
                     selectedIndexForPriority = i
                 }
             }
             
-            let startData = Utilities.StringToDateFormatter(DateString: taskData["startDt"] as? String ?? "", FromString: "MM/dd/yyyy")
+            let startData = Utilities.StringToDateFormatter(DateString: taskList?.startDate ?? taskData["startDt"] as? String ?? "", FromString: "MM/dd/yyyy")
             self.EvntStartDate = startData
-            self.txtStartdate.text = taskData["startDt"] as? String ?? ""
+            self.txtStartdate.text = taskList?.startDate ?? taskData["startDt"] as? String ?? ""
             
-            let endData = Utilities.StringToDateFormatter(DateString: taskData["endDt"] as? String ?? "", FromString: "MM/dd/yyyy")
+            let endData = Utilities.StringToDateFormatter(DateString: taskList?.endDate ?? taskData["endDt"] as? String ?? "", FromString: "MM/dd/yyyy")
             self.EvntEndDate = endData
-            self.txtEnddate.text = taskData["endDt"] as? String ?? ""
+            self.txtEnddate.text = taskList?.endDate ?? taskData["endDt"] as? String ?? ""
             
-            let reminderSet = taskData["reminderSet"] as? String
+            let reminderSet = taskList?.reminderSet ?? taskData["reminderSet"] as? String
             btnsetReminder.isSelected = reminderSet == "0" ? false : true
             
             if reminderSet != "0"{
-                remindertime.text = taskData["reminderTime"] as? String ?? ""
-                txtreminderEnd.text = taskData["reminderDt"] as? String ?? ""
+                remindertime.text = taskList?.reminderTime ?? taskData["reminderTime"] as? String ?? ""
+                txtreminderEnd.text = taskList?.reminderDt ?? taskData["reminderDt"] as? String ?? ""
             }
             
 //            txtStartdate.text = taskData["subject"] as? String ?? ""
@@ -177,11 +179,11 @@ class ScheduleTaskVC: UIViewController, NVActivityIndicatorViewable {
          */
         
         if isEdit{
-            
-            let dictAPI = ["created_timestamp" : taskData["created_timestamp"] as! String,
+            let createdTimeStamp = taskList?.created_timestamp ?? taskData["created_timestamp"] as? String ?? ""
+            let dictAPI = ["created_timestamp" : createdTimeStamp,
             "endDt" : self.txtEnddate.text!,
-            "eventId" : strType == "L" ? "" : objLeadList.eventId!,
-            "leadId" : taskData["leadId"] as! String,
+            "eventId" : strType == "L" ? "" : selectedEventObj.eventid!,
+            "leadId" : strType == "E" ? "" : taskData["leadId"] as! String,
             "priorityId" : dictPriority["id"]!,
             "reminderDt" : btnsetReminder.isSelected ? self.txtreminderEnd.text! : "",
             "reminderSet" : btnsetReminder.isSelected ? 1 : 0,
@@ -202,8 +204,8 @@ class ScheduleTaskVC: UIViewController, NVActivityIndicatorViewable {
         }else{
             let dictAPI = ["created_timestamp" : "\(timeStamp)",
             "endDt" : self.txtEnddate.text!,
-            "eventId" : strType == "L" ? "" : objLeadList.eventId!,
-            "leadId" : objLeadList.leadId!,
+            "eventId" : strType == "L" ? "" : selectedEventObj.eventid!,
+            "leadId" : strType == "E" ? "" : taskData["leadId"] as! String,
             "priorityId" : dictPriority["id"]!,
             "reminderDt" : btnsetReminder.isSelected ? self.txtreminderEnd.text! : "",
             "reminderSet" : btnsetReminder.isSelected ? 1 : 0,
@@ -385,3 +387,4 @@ extension ScheduleTaskVC:WebServiceDelegate{
         present(alert,animated: true,completion: nil)
     }
 }
+

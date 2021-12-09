@@ -24,7 +24,8 @@ class ScheduledTasksViewController: UIViewController, NVActivityIndicatorViewabl
     
     @IBOutlet var btnStatus: UIButton!
     @IBOutlet var lblStatus: UILabel!
-    
+    @IBOutlet weak var heightConstantBottomView: NSLayoutConstraint!
+
     let webService : WebService = WebService()
     var handleWebService : HandleWebService = HandleWebService()
     var appdelegate = AppDelegate()
@@ -48,23 +49,26 @@ class ScheduledTasksViewController: UIViewController, NVActivityIndicatorViewabl
     var selectedUserID = String()
     var durationID = String()
     var statusID = String()
-    
+    var selectedEventObj: EventDetail =  EventDetail()
+    var selectedRow = -1
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Scheduled Tasks"
         self.findHamburguerViewController()?.gestureEnabled = false
         
-        let filter = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(self.btnFilter(_:)))//#selector(addTapped)
-        let export = UIBarButtonItem(image:#imageLiteral(resourceName: "Icon-40"), style: .plain, target: self, action: #selector(btnExportTapped))//)btnExportAction
+        let add = UIBarButtonItem(image:UIImage(named: "plus"), style: .plain, target: self, action: #selector(self.btnAdd(_:)))//#selector(addTapped)
+//        let export = UIBarButtonItem(image:#imageLiteral(resourceName: "Icon-40"), style: .plain, target: self, action: #selector(btnExportTapped))//)btnExportAction
         let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         fixedSpace.width = -26.0
         
-        self.navigationItem.rightBarButtonItems = [filter,fixedSpace,export]
+        self.navigationItem.rightBarButtonItems = [add]
         
         self.FilterView.isHidden = true
         
-        tblScheduledTasks.rowHeight = 120
-        
+//        tblScheduledTasks.rowHeight = 63
+        tblScheduledTasks.rowHeight = UITableView.automaticDimension
+        tblScheduledTasks.estimatedRowHeight = 63
         
             
         //MARK: WEB SERVICES CALL TEAM MEMBER LIST...
@@ -85,9 +89,31 @@ class ScheduledTasksViewController: UIViewController, NVActivityIndicatorViewabl
         statusArr.add(dict3)
         statusArr.add(dict4)
         
+        self.view.layoutIfNeeded()
+    }
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        heightConstantBottomView.constant = 0
+        selectedRow = -1
+        callTaskListAPI()
     }
     
     //MARK:- WEBServices Function in Schedual Task....
+    @objc func callTaskListAPI() {
+        let dict = [
+            "userId" : objLoginUserDetail.createTimeStamp! as AnyObject,
+            "leadId" : "",
+            "eventId" : selectedEventObj.eventid!,
+            "type" : "E"
+        ] as [String : AnyObject]
+        
+        //Progress Bar Loding...
+        let size = CGSize(width: 30, height: 30)
+        startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
+        
+        webService.doRequestPost(GET_TASK_LIST_API_URL, params: dict, key: "taskList", delegate: self)
+    }
     func callWebServiceForScheduledTask(selectedId:String,typeId:String,statusId:String)
     {
     
@@ -112,7 +138,13 @@ class ScheduledTasksViewController: UIViewController, NVActivityIndicatorViewabl
         
         webService.doRequestPost(GET_SCHEDULED_TASKS_URL, params: param as [String : AnyObject], key: "taskList", delegate: self)
     }
-    
+    //MARK:- Button Add Action...
+    @IBAction func btnAdd(_ sender: Any) {
+        let vc = StoryBoard.MyLead.instantiateViewController(withIdentifier: "ScheduleTaskVC") as! ScheduleTaskVC
+        vc.strType = "E"
+        vc.selectedEventObj = selectedEventObj
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     //MARK:- Button Filter Action...
     @IBAction func btnFilter(_ sender: Any) {
         self.FilterView.isHidden = false
@@ -426,6 +458,49 @@ func isAddQuoteCharater(_ string: String) -> Bool {
             self.FilterView.isHidden = true
             },cancelAction: { print("cancel")})
     }
+    @IBAction func btnEditclicked(_ sender: Any) {
+        
+        let vcCreateList = StoryBoard.MyLead.instantiateViewController(withIdentifier: "ScheduleTaskVC") as! ScheduleTaskVC
+//        let dictObj = self.arrTaskData[self.selectedLeadID]
+        vcCreateList.strType = "E"
+        vcCreateList.selectedEventObj = selectedEventObj
+        vcCreateList.isEdit = true
+        let task = self.arrTaskList[self.selectedRow] as! TaskList
+        vcCreateList.taskList = task
+        self.navigationController?.pushViewController(vcCreateList, animated: true)
+    }
+    
+    @IBAction func btnDeleteCliked(_ sender: Any) {
+        
+                    // create the alert
+                    let alert = UIAlertController(title: "Mleads", message: "Are you sure, you want to delete this task?", preferredStyle: UIAlertController.Style.alert)
+
+                           // add the actions (buttons)
+                    alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (Alert) in
+                        print("Delete")
+                        
+//                        let timestamp = Date.currentTimeStamp
+                        let task = self.arrTaskList[self.selectedRow] as! TaskList
+
+                        let dict = [
+                            "userId" : objLoginUserDetail.createTimeStamp! as AnyObject,
+                            "eventId" : task.eventId!,
+                            "created_timestamp": task.created_timestamp!
+                            ] as [String : AnyObject]
+                        
+                        //Progress Bar Loding...
+                        let size = CGSize(width: 30, height: 30)
+                        self.startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
+                        
+                        self.webService.doRequestPost(DELETE_TASK_API_URL, params: dict, key: "deleteTask", delegate: self)
+                        
+                        
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+    }
 }
 
 //MARK:- TableView Delegate And DataSource Method...
@@ -435,55 +510,60 @@ extension ScheduledTasksViewController:UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let objTaskList : TaskList
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let lblEventName:UILabel = cell.contentView.viewWithTag(101) as! UILabel
+        let lblLocation:UILabel = cell.contentView.viewWithTag(102) as! UILabel
+        let lblCity:UILabel = cell.contentView.viewWithTag(103) as! UILabel
+        let lbldate:UILabel = cell.contentView.viewWithTag(104) as! UILabel
         
-        objTaskList = arrTaskList[indexPath.row] as! TaskList
+        let taskList = arrTaskList[indexPath.row] as! TaskList
         
-        let lblTaskName:UILabel = cell.contentView.viewWithTag(201) as! UILabel
-        let lblStartDate:UILabel = cell.contentView.viewWithTag(202) as! UILabel
-        let lblEndDate:UILabel = cell.contentView.viewWithTag(203) as! UILabel
-        let lblStatus:UILabel = cell.contentView.viewWithTag(204) as! UILabel
-        
-        lblTaskName.text = objTaskList.subject
-        lblStartDate.text = objTaskList.startDate
-        lblEndDate.text = objTaskList.endDate
-        
-        if objTaskList.statusId == "1"
-        {
-            lblStatus.text = "In-Progress"
+        if selectedRow == indexPath.row{
+            cell.contentView.viewWithTag(110)?.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        }else{
+            cell.contentView.viewWithTag(110)?.backgroundColor = UIColor.white
         }
-        else if objTaskList.statusId == "2"
-        {
-            lblStatus.text = "Completed"
+        
+        lblEventName.text = taskList.subject
+        lblLocation.text = taskList.startDate
+        lblCity.text = taskList.endDate
+//        ["In-Progress", "Completed", "Waiting For", "Deferred"]
+        switch taskList.statusId {
+        case "1":
+            lbldate.text = "In-Progress"
+        case "2":
+            lbldate.text = "Completed"
+        case "3":
+            lbldate.text = "Waiting For"
+        case "4":
+            lbldate.text = "Deferred"
+        default:
+            print("")
         }
-        else if objTaskList.statusId == "3"
-        {
-            lblStatus.text = "Waiting"
-        }
-        else if objTaskList.statusId == "4"
-        {
-            lblStatus.text = "Deferred"
-        }
+        
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        heightConstantBottomView.constant = 50
+        self.view.layoutIfNeeded()
+        tblScheduledTasks.reloadData()
         
-        let tempTaskList = arrTaskList[indexPath.row] as! TaskList
-
-        print(tempTaskList.subject!)
-
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ScheduledTaskDetailViewController") as! ScheduledTaskDetailViewController
-        vc.objTaskList = tempTaskList
-        vc.timeStamp = tempTaskList.created_timestamp!
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let tempTaskList = arrTaskList[indexPath.row] as! TaskList
+//
+//        print(tempTaskList.subject!)
+//
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ScheduledTaskDetailViewController") as! ScheduledTaskDetailViewController
+//        vc.objTaskList = tempTaskList
+//        vc.timeStamp = tempTaskList.created_timestamp!
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 120
+//    }
 }
 
 //MARK:- Webservices Delegate Method...
@@ -540,7 +620,39 @@ extension ScheduledTasksViewController:WebServiceDelegate{
         }
         
         else if apiKey == GET_SCHEDULED_TASKS_URL{
-             let result = handleWebService.handleGetSchedualTasksList(response)
+//             let result = handleWebService.handleGetSchedualTasksList(response)
+//            if result.Status
+//            {
+//                arrTaskList = result.TaskList
+//                if arrTaskList.count == 0
+//                {
+//                    arrTaskList.removeAllObjects()
+//                    tblScheduledTasks.reloadData()
+//                    stopAnimating()
+//                }
+//                else
+//                {
+//                    tblScheduledTasks.reloadData()
+//                    stopAnimating()
+//                }
+//            }
+        }
+        
+        else if apiKey == Get_EmailTamplate_API
+        {
+            let result  = handleWebService.getEmailTemplate(response)
+            stopAnimating()
+            let mailComposeViewController = configuredMailComposeViewController(reslt: result)
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                self.showSendMailErrorAlert()
+            }
+            
+        }
+        else if apiKey == GET_TASK_LIST_API_URL
+        {
+            let result = handleWebService.handleGetTaskList(response)
             if result.Status
             {
                 arrTaskList = result.TaskList
@@ -557,16 +669,43 @@ extension ScheduledTasksViewController:WebServiceDelegate{
                 }
             }
         }
-        
-        else if apiKey == Get_EmailTamplate_API
-        {
-            let result  = handleWebService.getEmailTemplate(response)
-            stopAnimating()
-            let mailComposeViewController = configuredMailComposeViewController(reslt: result)
-            if MFMailComposeViewController.canSendMail() {
-                self.present(mailComposeViewController, animated: true, completion: nil)
-            } else {
-                self.showSendMailErrorAlert()
+        else if apiKey == DELETE_TASK_API_URL{
+            
+            let json = JSON(data: response)
+            print(json)
+
+            if json["deleteTask"]["status"].string == "YES"
+            {
+                arrTaskList.removeObject(at: selectedRow)
+                selectedRow = -1
+                self.heightConstantBottomView.constant = 0
+                self.view.layoutIfNeeded()
+                if self.arrTaskList.count == 0{
+                    self.tblScheduledTasks.isHidden = true
+//                    self.lblNoDataFound.isHidden = false
+                }else{
+                    self.tblScheduledTasks.isHidden = false
+//                    self.lblNoDataFound.isHidden = true
+                }
+                self.tblScheduledTasks.reloadData()
+                
+                
+//                if json["getTaskList"]["taskList"] != nil{
+//                    if json["getTaskList"]["taskList"].array?.count ?? 0 > 0{
+//                        let arrData = json["getTaskList"]["taskList"]
+//                        for i in 0..<arrData.count
+//                        {
+//                            let arrEvent = arrData[i]
+//                            self.arrTaskData.append(arrEvent.dictionaryObject!)
+//                        }
+//                        self.tblTaskList.reloadData()
+//                    }
+//
+//                }
+//
+                print("TRUE")
+            }else{
+                print("FALSE")
             }
             
         }

@@ -10,7 +10,7 @@ import UIKit
 
 class EventsDetailViewController: UIViewController {
 
-    var objEventDetail: EventDetail = EventDetail() 
+    var objEventDetail: EventDetail = EventDetail()
     
     @IBOutlet var lblEventsName: UILabel!
     @IBOutlet var lblEventsLocation: UILabel!
@@ -84,6 +84,7 @@ class EventsDetailViewController: UIViewController {
 
     func handelTaskClick() {
         let VC = mainStoryboard.instantiateViewController(withIdentifier:  "ScheduledTasksViewController") as! ScheduledTasksViewController
+        VC.selectedEventObj = self.objEventDetail
         self.navigationController?.pushViewController(VC, animated: true)
     }
 
@@ -123,3 +124,4 @@ class EventsDetailViewController: UIViewController {
     
 
 }
+

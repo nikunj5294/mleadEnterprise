@@ -290,7 +290,7 @@ open class HandleWebService:NSObject
                 
             }
             
-            isStatus = true 
+            isStatus = true
         }
         print(arrTeamMember)
         print(arrAllEvents)
@@ -540,6 +540,7 @@ open class HandleWebService:NSObject
                                 //10/12/2019 comment line
                                 //06/01/2020
                                 objEvent.eventName = dicEvent["eventName"] as? String
+                                objEvent.eventid = (dicEvent["eventId"] as! String)
                                 objEvent.createdTimeStamp = (dicEvent["eventId"] as! String)
                                 objEvent.location =  dicEvent["location"] as! String
                                 objEvent.city =  dicEvent["city"] as! String
@@ -826,7 +827,40 @@ open class HandleWebService:NSObject
         }
         return(isStatus,arrTaskList)
     }
-    
+    func handleGetTaskList(_ response: Data) -> (Status:Bool,TaskList:NSMutableArray)
+    {
+        var isStatus:Bool = false
+        let arrTaskList = NSMutableArray()
+        let json = JSON(data: response)
+        
+        if json["getTaskList"]["status"].string == "YES"
+        {
+            //isStatus = true
+            let tasksList = json["getTaskList"]["taskList"]
+            for i in 0..<tasksList.count
+            {
+                let objTaskList:TaskList = TaskList()
+                
+                objTaskList.subject = tasksList[i]["subject"].string
+                objTaskList.startDate = tasksList[i]["startDt"].string
+                objTaskList.endDate = tasksList[i]["endDt"].string
+                objTaskList.priorityId = tasksList[i]["priorityId"].string
+                objTaskList.statusId = tasksList[i]["statusId"].string
+                objTaskList.created_timestamp = tasksList[i]["created_timestamp"].string
+                objTaskList.updated_timestamp = tasksList[i]["updated_timestamp"].string
+                objTaskList.leadId = tasksList[i]["userId"].string
+                objTaskList.eventId = tasksList[i]["eventId"].string
+                objTaskList.eventName = tasksList[i]["eventName"].string
+                objTaskList.isWhere = tasksList[i]["isWhere"].string
+                objTaskList.taskAddedFor = tasksList[i]["taskAddedFor"].string
+                objTaskList.teamMember = tasksList[i]["TeamMember"].string
+                
+                arrTaskList.add(objTaskList)
+            }
+            isStatus = true
+        }
+        return(isStatus,arrTaskList)
+    }
     //MARK: Get Scheduled Tasks List Detail...
     open func handleGetTaskListDetail(_ response:Data) -> (Status:Bool,TaskListDetail:TaskList)
     {
