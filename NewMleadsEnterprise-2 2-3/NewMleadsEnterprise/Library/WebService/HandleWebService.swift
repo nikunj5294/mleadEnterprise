@@ -414,7 +414,7 @@ open class HandleWebService:NSObject
         }
         return (isStatus, arrTeamMember, arrAllEvents, arrDict)
     }
-    func handleGetEventWiseLeadList(_ response: Data) -> (Status: Bool, arrLeadList: NSMutableArray)
+    func handleGetEventWiseLeadList(_ response: Data, isMessaging:Bool) -> (Status: Bool, arrLeadList: NSMutableArray)
     {
         var isStatus:Bool = false
         let arrAllEvents = NSMutableArray()
@@ -428,43 +428,48 @@ open class HandleWebService:NSObject
             let arrLeadList = json["getEventWiseLeadList"]["eventInfoLeadList"]["EventsLeads"].array
             for k in 0..<arrLeadList!.count
             {
-                let objLeadlist: LeadList = LeadList()
                 
-                objLeadlist.createTimeStamp = arrLeadList![k]["leadId"].string
-                objLeadlist.eventId = eventInfo["eventId"].string
-                objLeadlist.firstName = arrLeadList![k]["firstName"].string
-                objLeadlist.lastName = arrLeadList![k]["lastName"].string
-                objLeadlist.company = arrLeadList![k]["company"].string
-                objLeadlist.email = arrLeadList![k]["email"].string
-                objLeadlist.phone = arrLeadList![k]["phone"].string
-                objLeadlist.imgURL = arrLeadList![k]["photo_path"].string
-                objLeadlist.photo_path_thumbnail = arrLeadList![k]["photo_path_thumbnail"].string
+                if isMessaging == false || isMessaging == true && arrLeadList![k]["phone"].string != nil && !arrLeadList![k]["phone"].string!.isBlank
+                {
+                    let objLeadlist: LeadList = LeadList()
+
+                    objLeadlist.createTimeStamp = arrLeadList![k]["leadId"].string
+                    objLeadlist.eventId = eventInfo["eventId"].string
+                    objLeadlist.firstName = arrLeadList![k]["firstName"].string
+                    objLeadlist.lastName = arrLeadList![k]["lastName"].string
+                    objLeadlist.company = arrLeadList![k]["company"].string
+                    objLeadlist.email = arrLeadList![k]["email"].string
+                    objLeadlist.phone = arrLeadList![k]["phone"].string
+                    objLeadlist.imgURL = arrLeadList![k]["photo_path"].string
+                    objLeadlist.photo_path_thumbnail = arrLeadList![k]["photo_path_thumbnail"].string
+                    
+                    objLeadlist.leadStatus = arrLeadList![k]["lead_status"].string
+                    objLeadlist.leadStatusName = arrLeadList![k]["leadStatusTitle"].string
+                    objLeadlist.leadStatusURL = arrLeadList![k]["leadStatusUrl"].string
+                    objLeadlist.leadId = arrLeadList![k]["leadId"].string
+                    
+                    objLeadlist.target = arrLeadList![k]["targerAmount"].string
+                    objLeadlist.periods = arrLeadList![k]["periods"].string
+                    objLeadlist.targetFuture = arrLeadList![k]["targetFutureAmount"].string
+                    objLeadlist.targetClosing = arrLeadList![k]["tagetCloseDate"].string
+                    objLeadlist.proOfClosing = arrLeadList![k]["probabilityClosePer"].string
+                    objLeadlist.nextStepDate = arrLeadList![k]["nextStepDate"].string
+                    objLeadlist.jobTitle = arrLeadList![k]["job_title"].string
+                    
+                    objLeadlist.notes = arrLeadList![k]["notes"].string
+                    objLeadlist.otherPhone = arrLeadList![k]["other_phone"].string
+                    objLeadlist.addedLeadType = arrLeadList![k]["addedLeadType"].string
+                    objLeadlist.recordSoundUrl = arrLeadList![k]["recordSoundUrl"].string
+                    objLeadlist.processBadge = arrLeadList![k]["process"].string
+                    objLeadlist.followup_action_list = arrLeadList![k]["followup_action_list"].string
+                    
+                    //objLeadlist.product
+                    
+                    //objLeadlist.leadAddedType = leadType
+                 
+                    arrAllEvents.add(objLeadlist)
+                }
                 
-                objLeadlist.leadStatus = arrLeadList![k]["lead_status"].string
-                objLeadlist.leadStatusName = arrLeadList![k]["leadStatusTitle"].string
-                objLeadlist.leadStatusURL = arrLeadList![k]["leadStatusUrl"].string
-                objLeadlist.leadId = arrLeadList![k]["leadId"].string
-                
-                objLeadlist.target = arrLeadList![k]["targerAmount"].string
-                objLeadlist.periods = arrLeadList![k]["periods"].string
-                objLeadlist.targetFuture = arrLeadList![k]["targetFutureAmount"].string
-                objLeadlist.targetClosing = arrLeadList![k]["tagetCloseDate"].string
-                objLeadlist.proOfClosing = arrLeadList![k]["probabilityClosePer"].string
-                objLeadlist.nextStepDate = arrLeadList![k]["nextStepDate"].string
-                objLeadlist.jobTitle = arrLeadList![k]["job_title"].string
-                
-                objLeadlist.notes = arrLeadList![k]["notes"].string
-                objLeadlist.otherPhone = arrLeadList![k]["other_phone"].string
-                objLeadlist.addedLeadType = arrLeadList![k]["addedLeadType"].string
-                objLeadlist.recordSoundUrl = arrLeadList![k]["recordSoundUrl"].string
-                objLeadlist.processBadge = arrLeadList![k]["process"].string
-                objLeadlist.followup_action_list = arrLeadList![k]["followup_action_list"].string
-                
-                //objLeadlist.product
-                
-                //objLeadlist.leadAddedType = leadType
-             
-                arrAllEvents.add(objLeadlist)
             }
             isStatus = true
         }

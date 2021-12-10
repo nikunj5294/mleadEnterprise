@@ -115,6 +115,10 @@ class EventsDetailViewController: UIViewController,NVActivityIndicatorViewable {
     }
 
     func handleMessageClick() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteLeadViewController") as! DeleteLeadViewController
+        vc.isMessaging = true
+        vc.selectedEventObj = self.objEventDetail
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func handleDeleteAllClick() {

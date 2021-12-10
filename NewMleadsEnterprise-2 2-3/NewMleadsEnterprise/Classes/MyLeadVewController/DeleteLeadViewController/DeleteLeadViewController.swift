@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import MessageUI
 
 class DeleteLeadViewController: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet var tblLeadView: UITableView!
@@ -17,30 +18,81 @@ class DeleteLeadViewController: UIViewController,NVActivityIndicatorViewable {
     var appdelegate = AppDelegate()
     var selectedEventObj: EventDetail =  EventDetail()
     var arrEventLeadList = NSMutableArray()
-
+    var isMessaging = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Select Specific Leads"
-        let delete = UIBarButtonItem(title:"Delete", style: .plain, target: self, action: #selector(self.btnDeleteClick(_:)))//#selector(addTapped)
+        
+        self.navigationItem.title = (isMessaging ? "Select Lead" : "Select Specific Leads")
+        
+        let delete = UIBarButtonItem(title:(isMessaging ? "OK" : "Delete"), style: .plain, target: self, action: (isMessaging ? #selector(self.btnSendMessageClick(_:)) : #selector(self.btnDeleteClick(_:))))//#selector(addTapped)
         self.navigationItem.rightBarButtonItems = [delete]
         self.tblLeadView.register(UINib(nibName: "LeadEventTblCell", bundle: nil), forCellReuseIdentifier: "LeadEventTblCell")
         self.CallWebServiceMyLead()
         // Do any additional setup after loading the view.
     }
-    
+    @IBAction func btnSendMessageClick(_ sender: UIButton) {
+        var arrLeadPhone = [String]()
+        for i in 0..<self.arrEventLeadList.count
+        {
+            let lead = self.arrEventLeadList[i] as! LeadList
+            if lead.isSelected != nil && lead.isSelected == true
+            {
+                arrLeadPhone.append(lead.phone!)
+            }
+        }
+        if arrLeadPhone.count == 0
+        {
+            let alert = UIAlertController(title: "", message: "Select any lead to send message!",  preferredStyle: .alert)
+            let attributedString = Utilities.alertAttribute(titleString: "Messaging")
+            alert.setValue(attributedString, forKey: "attributedTitle")
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+            })
+            OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+            
+            alert.addAction(OKAction)
+            present(alert,animated: true,completion: nil)
+            return
+        }
+        if (MFMessageComposeViewController.canSendText())
+                {
+                    let controller = MFMessageComposeViewController()
+                    controller.body = ""
+                    controller.recipients = arrLeadPhone
+                    controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+                }
+                else
+                {
+                    print("Error")
+                }
+    }
     @IBAction func btnDeleteClick(_ sender: UIButton) {
+        var arrLeadIds = [String]()
+        for i in 0..<self.arrEventLeadList.count
+        {
+            let lead = self.arrEventLeadList[i] as! LeadList
+            if lead.isSelected != nil && lead.isSelected == true
+            {
+                arrLeadIds.append(lead.leadId!)
+            }
+        }
+        if arrLeadIds.count == 0
+        {
+            let alert = UIAlertController(title: "", message: "Select one or more lead to delete!",  preferredStyle: .alert)
+            let attributedString = Utilities.alertAttribute(titleString: "Messaging")
+            alert.setValue(attributedString, forKey: "attributedTitle")
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+            })
+            OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+            
+            alert.addAction(OKAction)
+            present(alert,animated: true,completion: nil)
+            return
+        }
         let alertController = UIAlertController(title: "MLeads", message: "All follow-ups in this lead will be deleted along with tasks and meetings; Are you sure you want to delete the lead?", preferredStyle: .alert)
         
         let alertaction1 = UIAlertAction(title: "Yes", style: .default) { (action) in
-            var arrLeadIds = [String]()
-            for i in 0..<self.arrEventLeadList.count
-            {
-                let lead = self.arrEventLeadList[i] as! LeadList
-                if lead.isSelected != nil && lead.isSelected == true
-                {
-                    arrLeadIds.append(lead.leadId!)
-                }
-            }
+            
             let strIDS = arrLeadIds.joined(separator: ",")
             
             let param:[String : AnyObject] = ["userId":objLoginUserDetail.createTimeStamp! as AnyObject, "leadId": (arrLeadIds.count == self.arrEventLeadList.count ? "" : strIDS) as AnyObject, "eventId" : self.selectedEventObj.eventid! as AnyObject, "isDeleteAll" : (arrLeadIds.count == self.arrEventLeadList.count ? 1: 0) as AnyObject]
@@ -140,9 +192,26 @@ extension DeleteLeadViewController: WebServiceDelegate{
         if  apiKey == GET_LEADLIST_EVENTWISE
         {
             print("LeadList New...")
-            let result = handleWebService.handleGetEventWiseLeadList(response)
+            let result = handleWebService.handleGetEventWiseLeadList(response, isMessaging: self.isMessaging)
             print(result.Status)
-            arrEventLeadList = result.arrLeadList
+            arrEventLeadList = NSMutableArray()
+            if result.arrLeadList.count == 0
+            {
+                let alert = UIAlertController(title: "", message: (isMessaging ? "No lead available with phone number!" : "No lead available!"),  preferredStyle: .alert)
+                let attributedString = Utilities.alertAttribute(titleString: "Messaging")
+                alert.setValue(attributedString, forKey: "attributedTitle")
+                let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+                    
+                })
+                OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                
+                alert.addAction(OKAction)
+                present(alert,animated: true,completion: nil)
+            }
+            else
+            {
+                arrEventLeadList = result.arrLeadList
+            }
             tblLeadView.reloadData()
             print("EVENT DIST",result.arrLeadList)
         }
@@ -186,4 +255,21 @@ extension DeleteLeadViewController: WebServiceDelegate{
         present(alert,animated: true,completion: nil)
     }
     
+}
+extension DeleteLeadViewController: MFMessageComposeViewControllerDelegate
+{
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult)
+        {
+            controller.dismiss(animated: true) {
+                let alert = UIAlertController(title: "", message: "Message sent successfully!",  preferredStyle: .alert)
+                let attributedString = Utilities.alertAttribute(titleString: "Messaging")
+                alert.setValue(attributedString, forKey: "attributedTitle")
+                let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+                })
+                OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                
+                alert.addAction(OKAction)
+                self.present(alert,animated: true,completion: nil)
+            }
+        }
 }
