@@ -475,6 +475,34 @@ open class HandleWebService:NSObject
         }
         return (isStatus, arrAllEvents)
     }
+    //
+    func handleGetAddTeamMemberList(_ response: Data) -> (Status: Bool, arrTeamMember: [TeamMember])
+    {
+        var isStatus:Bool = false
+        var arrAllTeamMember = [TeamMember]()
+        let json = JSON(data: response)
+        print(json)
+        
+        if json["AddTeamMember"]["status"].string == "YES"
+        {
+            let arrTeamMember = json["AddTeamMember"]["AddTeamMemberList"].array
+            for k in 0..<arrTeamMember!.count
+            {
+                let objLeadlist: TeamMember = TeamMember()
+
+                objLeadlist.first_name = arrTeamMember![k]["first_name"].string
+                objLeadlist.last_name = arrTeamMember![k]["last_name"].string
+                objLeadlist.reportsTo = arrTeamMember![k]["reportsTo"].string
+                objLeadlist.created_timestamp = arrTeamMember![k]["created_timestamp"].string
+                objLeadlist.export_allowed = arrTeamMember![k]["export_allowed"].string
+             
+                arrAllTeamMember.append(objLeadlist)
+            }
+            isStatus = true
+        }
+        return (isStatus, arrAllTeamMember)
+    }
+   //20/1
    //20/1/2020/11/2019
     //MARK:- Close window In Tempary on DAta Change in team member and event within date 16/10/2019
     func handleGetEventListWithin(_ response: Data) -> (Status: Bool, teamMember: [UserDetail], arrEventL: NSMutableArray)

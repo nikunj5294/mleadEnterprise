@@ -80,6 +80,8 @@ var GET_ADD_PUSHNOTIFICATION  = "getAddPushNotification.php"
 var LOGOUT_API_URL  = "getUnRegisterDevice.php"
 var GET_ADD_TEAM_MEMBER_API_URL  = "registerFeeTrialAddTeamMember.php"
 var GET_ADD_TEAM_MEMBER_LIST  = "getAddTeamMemberList.php"
+var GET_NOT_SHARED_LEAD_LIST  = "getNotSharedLeadList.php"
+
 var UPDATE_USER_API_URL  = "updateUser.php"
 var SUBMIT_REQUEST_FOR_DEMO_API  = "addRequestDemo.php"
 var DELETE_TEAM_MEMBER_API_URL  = "deleteTeamMember.php"
@@ -128,6 +130,8 @@ var GET_LEAD_BY_ID_API_URL = "getLeadDetail.php"
 
 var EDIT_LEAD_API_URL = "updateLeadPost.php"
 var GET_LEADLIST_EVENTWISE  = "getEventWiseLeadList.php"
+var GET_ADDSHAREDLEAD  = "getAddShareLead.php"
+
 
 //Ajay
 struct AppColor {

@@ -18883,6 +18883,60 @@ Leads</string>
             </objects>
             <point key="canvasLocation" x="4250" y="-567"/>
         </scene>
+        <!--Team MemberVC-->
+        <scene sceneID="QnS-Y6-5Vt">
+            <objects>
+                <viewController restorationIdentifier="TeamMemberVC" storyboardIdentifier="TeamMemberVC" id="2HF-Vd-imI" customClass="TeamMemberVC" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7u3-sG-Wps"/>
+                        <viewControllerLayoutGuide type="bottom" id="kK3-JH-gvB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ASz-Zi-KJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYg-Up-Uwz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-7B-cUd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="2HF-Vd-imI" id="iNC-it-D2R"/>
+                                            <outlet property="delegate" destination="2HF-Vd-imI" id="uUG-5f-Dd6"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YPY-7B-cUd" secondAttribute="bottom" id="75H-Fl-h8a"/>
+                                    <constraint firstItem="YPY-7B-cUd" firstAttribute="leading" secondItem="qYg-Up-Uwz" secondAttribute="leading" id="8H0-iJ-gQX"/>
+                                    <constraint firstItem="YPY-7B-cUd" firstAttribute="top" secondItem="qYg-Up-Uwz" secondAttribute="top" id="It9-Tx-SwH"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPY-7B-cUd" secondAttribute="trailing" id="PYi-P8-cDl"/>
+                                    <constraint firstItem="YPY-7B-cUd" firstAttribute="leading" secondItem="qYg-Up-Uwz" secondAttribute="leading" id="mLV-bb-0uU"/>
+                                    <constraint firstItem="YPY-7B-cUd" firstAttribute="leading" secondItem="qYg-Up-Uwz" secondAttribute="leading" id="x5H-fG-jOX"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPY-7B-cUd" secondAttribute="trailing" id="xUO-Cm-RoR"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPY-7B-cUd" secondAttribute="trailing" id="yHY-eU-74Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qYg-Up-Uwz" firstAttribute="top" secondItem="7u3-sG-Wps" secondAttribute="bottom" id="Cp4-fz-6I7"/>
+                            <constraint firstItem="qYg-Up-Uwz" firstAttribute="bottom" secondItem="kK3-JH-gvB" secondAttribute="top" id="EP8-mw-OxI"/>
+                            <constraint firstItem="qYg-Up-Uwz" firstAttribute="trailing" secondItem="ASz-Zi-KJr" secondAttribute="trailing" id="Efp-di-65f"/>
+                            <constraint firstItem="qYg-Up-Uwz" firstAttribute="leading" secondItem="ASz-Zi-KJr" secondAttribute="leading" id="UZq-Ss-Db4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Xy-X7-jMg"/>
+                    <connections>
+                        <outlet property="tblView" destination="YPY-7B-cUd" id="sai-2q-ka3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKK-mg-67Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4905" y="-567"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="138-87-66C">
@@ -18901,10 +18955,10 @@ Leads</string>
             <size key="intrinsicContentSize" width="115" height="17"/>
         </designable>
         <designable name="5fT-Lo-rJq">
-            <size key="intrinsicContentSize" width="72.333333333333329" height="25"/>
+            <size key="intrinsicContentSize" width="72.333333333333329" height="24.666666666666668"/>
         </designable>
         <designable name="9hZ-3S-73H">
-            <size key="intrinsicContentSize" width="44.666666666666664" height="25"/>
+            <size key="intrinsicContentSize" width="44.666666666666664" height="24.666666666666668"/>
         </designable>
         <designable name="CnR-ER-rOj">
             <size key="intrinsicContentSize" width="263" height="23.333333333333332"/>
@@ -18937,7 +18991,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="69" height="18.666666666666668"/>
         </designable>
         <designable name="PSO-RQ-iId">
-            <size key="intrinsicContentSize" width="111.33333333333333" height="25"/>
+            <size key="intrinsicContentSize" width="111.33333333333333" height="24.666666666666668"/>
         </designable>
         <designable name="Qg0-aH-L4h">
             <size key="intrinsicContentSize" width="96.666666666666671" height="18.666666666666668"/>
@@ -18982,7 +19036,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="94.666666666666671" height="17"/>
         </designable>
         <designable name="fJf-2b-qOZ">
-            <size key="intrinsicContentSize" width="130.66666666666666" height="25"/>
+            <size key="intrinsicContentSize" width="130.66666666666666" height="24.666666666666668"/>
         </designable>
         <designable name="gYf-ry-bSC">
             <size key="intrinsicContentSize" width="225.33333333333334" height="19.666666666666668"/>
@@ -19006,16 +19060,16 @@ Leads</string>
             <size key="intrinsicContentSize" width="43.333333333333336" height="18.666666666666668"/>
         </designable>
         <designable name="mdn-98-wgX">
-            <size key="intrinsicContentSize" width="67.666666666666671" height="25"/>
+            <size key="intrinsicContentSize" width="67.666666666666671" height="24.666666666666668"/>
         </designable>
         <designable name="oof-aY-quH">
-            <size key="intrinsicContentSize" width="70.333333333333329" height="25"/>
+            <size key="intrinsicContentSize" width="70.333333333333329" height="24.666666666666668"/>
         </designable>
         <designable name="r1z-DI-whB">
             <size key="intrinsicContentSize" width="59" height="18.666666666666668"/>
         </designable>
         <designable name="swD-IY-ciq">
-            <size key="intrinsicContentSize" width="33.666666666666664" height="25"/>
+            <size key="intrinsicContentSize" width="33.666666666666664" height="24.666666666666668"/>
         </designable>
         <designable name="trB-oY-bSo">
             <size key="intrinsicContentSize" width="70" height="18.666666666666668"/>

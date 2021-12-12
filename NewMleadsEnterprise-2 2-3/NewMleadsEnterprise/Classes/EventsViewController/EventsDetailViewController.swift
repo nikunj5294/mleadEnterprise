@@ -130,6 +130,9 @@ class EventsDetailViewController: UIViewController,NVActivityIndicatorViewable {
     }
 
     func handleShareLeadsClick() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TeamMemberVC") as! TeamMemberVC
+        vc.selectedEventObj = self.objEventDetail
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func handleunShareleadsClick() {
