@@ -51,21 +51,27 @@ class ScheduledTasksViewController: UIViewController, NVActivityIndicatorViewabl
     var statusID = String()
     var selectedEventObj: EventDetail =  EventDetail()
     var selectedRow = -1
-
+    var isfromreport = Bool()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Scheduled Tasks"
         self.findHamburguerViewController()?.gestureEnabled = false
         
         let add = UIBarButtonItem(image:UIImage(named: "plus"), style: .plain, target: self, action: #selector(self.btnAdd(_:)))//#selector(addTapped)
-//        let export = UIBarButtonItem(image:#imageLiteral(resourceName: "Icon-40"), style: .plain, target: self, action: #selector(btnExportTapped))//)btnExportAction
+        let filter = UIBarButtonItem(image:UIImage(named: "filter"), style: .plain, target: self, action: #selector(self.btnFilter(_:)))
+        let export = UIBarButtonItem(image:#imageLiteral(resourceName: "Icon-40"), style: .plain, target: self, action: #selector(btnExportTapped))//)btnExportAction
         let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         fixedSpace.width = -26.0
         
-        self.navigationItem.rightBarButtonItems = [add]
-        
-        self.FilterView.isHidden = true
-        
+        if isfromreport {
+            self.navigationItem.rightBarButtonItems = [filter,export]
+            self.FilterView.isHidden = false
+        }else{
+            self.navigationItem.rightBarButtonItems = [add]
+            self.FilterView.isHidden = true
+        }
+       
 //        tblScheduledTasks.rowHeight = 63
         tblScheduledTasks.rowHeight = UITableView.automaticDimension
         tblScheduledTasks.estimatedRowHeight = 63
@@ -101,10 +107,16 @@ class ScheduledTasksViewController: UIViewController, NVActivityIndicatorViewabl
     
     //MARK:- WEBServices Function in Schedual Task....
     @objc func callTaskListAPI() {
+        var name = String()
+        if let eventid = selectedEventObj.eventid {
+            name = eventid
+        }
+        
+        
         let dict = [
             "userId" : objLoginUserDetail.createTimeStamp! as AnyObject,
             "leadId" : "",
-            "eventId" : selectedEventObj.eventid!,
+            "eventId" : name,
             "type" : "E"
         ] as [String : AnyObject]
         
@@ -470,6 +482,8 @@ func isAddQuoteCharater(_ string: String) -> Bool {
         self.navigationController?.pushViewController(vcCreateList, animated: true)
     }
     
+    
+    
     @IBAction func btnDeleteCliked(_ sender: Any) {
         
                     // create the alert
@@ -620,22 +634,23 @@ extension ScheduledTasksViewController:WebServiceDelegate{
         }
         
         else if apiKey == GET_SCHEDULED_TASKS_URL{
-//             let result = handleWebService.handleGetSchedualTasksList(response)
-//            if result.Status
-//            {
-//                arrTaskList = result.TaskList
-//                if arrTaskList.count == 0
-//                {
-//                    arrTaskList.removeAllObjects()
-//                    tblScheduledTasks.reloadData()
-//                    stopAnimating()
-//                }
-//                else
-//                {
-//                    tblScheduledTasks.reloadData()
-//                    stopAnimating()
-//                }
-//            }
+             let result = handleWebService.handleGetSchedualTasksList(response)
+            if result.Status
+            {
+                arrTaskList.removeAllObjects()
+                arrTaskList = result.TaskList
+                if arrTaskList.count == 0
+                {
+                    arrTaskList.removeAllObjects()
+                    tblScheduledTasks.reloadData()
+                    stopAnimating()
+                }
+                else
+                {
+                    tblScheduledTasks.reloadData()
+                    stopAnimating()
+                }
+            }
         }
         
         else if apiKey == Get_EmailTamplate_API

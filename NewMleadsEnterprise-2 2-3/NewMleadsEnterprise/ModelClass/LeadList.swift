@@ -73,8 +73,10 @@ class LeadList : NSObject{
     var product = NSArray()
     
     var hasEventAtende: Bool? = nil
+
     var isSelected: Bool? = nil
 
+ 
  
     /*init(attechmentArray: NSArray, deleteIDsArray: NSArray , product: NSArray) {
         self.attechmentArray = attechmentArray

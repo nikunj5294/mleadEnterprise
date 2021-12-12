@@ -90,7 +90,7 @@ extension ReportViewController: UITableViewDelegate,UITableViewDataSource{
             print(" ")
             let VC = mainStoryboard.instantiateViewController(withIdentifier:  "ScheduledTasksViewController") as! ScheduledTasksViewController
             //let VC = mainStoryboard.instantiateViewController(withIdentifier:  "test2ViewController") as! test2ViewController
-            
+            VC.isfromreport = true
             self.navigationController?.pushViewController(VC, animated: true)
         }
         else if indexPath.row == 1{
