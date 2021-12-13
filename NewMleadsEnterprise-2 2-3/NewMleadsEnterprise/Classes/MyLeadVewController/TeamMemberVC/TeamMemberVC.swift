@@ -101,7 +101,7 @@ class TeamMemberVC: UIViewController,NVActivityIndicatorViewable {
         let size = CGSize(width: 30, height: 30)
         startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
         
-        webService.doRequestPost(GET_NOT_SHARED_LEAD_LIST, params: param, key: "user", delegate: self)
+        webService.doRequestPost(GET_NOT_SHARED_LEAD_LIST, params: param, key: "getNotSharedLeadList", delegate: self)
         
     }
     
@@ -205,7 +205,15 @@ extension TeamMemberVC: WebServiceDelegate{
 extension TeamMemberVC:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrTeamMemberList.count
+        if isLeads
+        {
+            return arrLeadList.count
+        }
+        else
+        {
+            return arrTeamMemberList.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -245,6 +253,7 @@ extension TeamMemberVC:UITableViewDelegate,UITableViewDataSource {
         {
             let teamMember = arrTeamMemberList[indexPath.row]
             cell.lblUserName.text = teamMember.first_name! + " " + teamMember.last_name!
+            cell.lblCompanyName.text = ""
         }
         
         

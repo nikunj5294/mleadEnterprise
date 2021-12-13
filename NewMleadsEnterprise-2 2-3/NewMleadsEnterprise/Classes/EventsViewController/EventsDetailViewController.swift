@@ -137,7 +137,9 @@ class EventsDetailViewController: UIViewController,NVActivityIndicatorViewable {
 
     func handleunShareleadsClick() {
         
-        //leads follow up clicked
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "UnShareLeadVC") as! UnShareLeadVC
+        vc.selectedEventObj = self.objEventDetail
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func HandleTransferLeadsClick() {

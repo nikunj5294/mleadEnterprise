@@ -60,6 +60,7 @@
 		99F9647A228EC13D0024F2AC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F96479228EC13D0024F2AC /* AccountViewController.swift */; };
 		99F9B97522572D5000F9E6B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9B97422572D5000F9E6B9 /* LoginViewController.swift */; };
 		B222AB7327623E080036CF71 /* DeleteLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */; };
+		B25E7CC92767579F0091B440 /* UnShareLeadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */; };
 		B298B5492765FFDA00A10D29 /* TeamMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298B5482765FFDA00A10D29 /* TeamMemberVC.swift */; };
 		D5B5961DCCC214F86FF7B701 /* Pods_NewMleadsEnterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752D2B1AF5DE26AF1C0F8B1F /* Pods_NewMleadsEnterprise.framework */; };
 		E90A373125728597004A2275 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90A373025728597004A2275 /* Setting.storyboard */; };
@@ -242,6 +243,7 @@
 		99F96479228EC13D0024F2AC /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		99F9B97422572D5000F9E6B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLeadViewController.swift; sourceTree = "<group>"; };
+		B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnShareLeadVC.swift; sourceTree = "<group>"; };
 		B298B5482765FFDA00A10D29 /* TeamMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberVC.swift; sourceTree = "<group>"; };
 		E90A373025728597004A2275 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoAboutUs.swift; sourceTree = "<group>"; };
@@ -650,6 +652,14 @@
 			path = DeleteLeadViewController;
 			sourceTree = "<group>";
 		};
+		B25E7CC7276757810091B440 /* UnShareLeadVC */ = {
+			isa = PBXGroup;
+			children = (
+				B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */,
+			);
+			path = UnShareLeadVC;
+			sourceTree = "<group>";
+		};
 		B298B5472765FF9C00A10D29 /* TeamMemberVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,6 +1018,7 @@
 		F19D5FD522D079D900362BA0 /* MyLeadVewController */ = {
 			isa = PBXGroup;
 			children = (
+				B25E7CC7276757810091B440 /* UnShareLeadVC */,
 				B298B5472765FF9C00A10D29 /* TeamMemberVC */,
 				B222AB6F27623DA80036CF71 /* DeleteLeadViewController */,
 				3E54695D275C826000938E1B /* SalesOpportunityListViewController */,
@@ -1358,6 +1369,7 @@
 				E9279E9625A9DFEF0035ED61 /* Follow-UpsMyLeadVC.swift in Sources */,
 				E9D503212579485C008F117D /* SystemOptionFollow-UpAction.swift in Sources */,
 				F165F3EF22DC870000405438 /* SettingViewController.swift in Sources */,
+				B25E7CC92767579F0091B440 /* UnShareLeadVC.swift in Sources */,
 				F17E075522C4F18D007E07A3 /* EventsDetailViewController.swift in Sources */,
 				0493901726357C2D003F1639 /* ScanBusinessLeadViewController.swift in Sources */,
 				F18873BE2499FCFA00E98DF6 /* Validate.swift in Sources */,

@@ -475,6 +475,90 @@ open class HandleWebService:NSObject
         }
         return (isStatus, arrAllEvents)
     }
+    func handleGetSharedLeadList(_ response: Data, eventID:String) -> (Status: Bool, arrUserWiseLead: [UserWiseLeadList])
+    {
+        var isStatus:Bool = false
+        var arrUserWiseLead = [UserWiseLeadList]()
+        
+        let json = JSON(data: response)
+        print(json)
+        
+        
+        if json["getLeadList"]["status"].string == "YES"
+        {
+            let eventLeadList = json["getLeadList"]["eventLeadList"].array
+            
+            for k in 0..<eventLeadList!.count
+            {
+                let userDetailArr = eventLeadList![k]["userDetailArr"].dictionary
+                let teamMember = TeamMember()
+                teamMember.first_name = userDetailArr!["first_name"]?.string
+                teamMember.last_name = userDetailArr!["last_name"]?.string
+                teamMember.created_timestamp = userDetailArr!["created_timestamp"]?.string
+                teamMember.export_allowed = userDetailArr!["export_allowed"]?.string
+                teamMember.reportsTo = userDetailArr!["reportsTo"]?.string
+                
+                var dictLead = UserWiseLeadList(member: nil, leadList: nil)
+                dictLead.member = teamMember
+                
+                let eventWiseLeadArr = eventLeadList![k]["eventWiseLeadArr"].array
+                for i in 0..<eventWiseLeadArr!.count
+                {
+                    if eventID == eventWiseLeadArr![i]["event_Id"].stringValue
+                    {
+                        let leadList = handleGetUserWiseLeadList(eventWiseLeadArr![i]["leadList"].array)
+                        dictLead.leadList = leadList
+                    }
+                }
+                arrUserWiseLead.append(dictLead)
+                
+            }
+            isStatus = true
+        }
+        return (isStatus, arrUserWiseLead)
+    }
+    func handleGetUserWiseLeadList(_ arrLeadList: [JSON]?) -> ([LeadList])
+    {
+        var arrLeads = [LeadList]()
+        for k in 0..<arrLeadList!.count
+        {
+            let objLeadlist: LeadList = LeadList()
+
+            objLeadlist.createTimeStamp = arrLeadList![k]["leadId"].string
+            objLeadlist.eventId = arrLeadList![k]["eventId"].string
+            objLeadlist.firstName = arrLeadList![k]["firstName"].string
+            objLeadlist.lastName = arrLeadList![k]["lastName"].string
+            objLeadlist.company = arrLeadList![k]["company"].string
+            objLeadlist.email = arrLeadList![k]["email"].string
+            objLeadlist.phone = arrLeadList![k]["phone"].string
+            objLeadlist.imgURL = arrLeadList![k]["photo_path"].string
+            objLeadlist.photo_path_thumbnail = arrLeadList![k]["photo_path_thumbnail"].string
+            
+            objLeadlist.leadStatus = arrLeadList![k]["lead_status"].string
+            objLeadlist.leadStatusName = arrLeadList![k]["leadStatusTitle"].string
+            objLeadlist.leadStatusURL = arrLeadList![k]["leadStatusUrl"].string
+            objLeadlist.leadId = arrLeadList![k]["leadId"].string
+            
+            objLeadlist.target = arrLeadList![k]["targerAmount"].string
+            objLeadlist.periods = arrLeadList![k]["periods"].string
+            objLeadlist.targetFuture = arrLeadList![k]["targetFutureAmount"].string
+            objLeadlist.targetClosing = arrLeadList![k]["tagetCloseDate"].string
+            objLeadlist.proOfClosing = arrLeadList![k]["probabilityClosePer"].string
+            objLeadlist.nextStepDate = arrLeadList![k]["nextStepDate"].string
+            objLeadlist.jobTitle = arrLeadList![k]["job_title"].string
+            
+            objLeadlist.notes = arrLeadList![k]["notes"].string
+            objLeadlist.otherPhone = arrLeadList![k]["other_phone"].string
+            objLeadlist.addedLeadType = arrLeadList![k]["addedLeadType"].string
+            objLeadlist.recordSoundUrl = arrLeadList![k]["recordSoundUrl"].string
+            objLeadlist.processBadge = arrLeadList![k]["process"].string
+            objLeadlist.followup_action_list = arrLeadList![k]["followup_action_list"].string
+            objLeadlist.sharedID = arrLeadList![k]["shared_id"].string
+            arrLeads.append(objLeadlist)
+        }
+        return (arrLeads)
+
+    }
     //
     func handleGetAddTeamMemberList(_ response: Data) -> (Status: Bool, arrTeamMember: [TeamMember])
     {
