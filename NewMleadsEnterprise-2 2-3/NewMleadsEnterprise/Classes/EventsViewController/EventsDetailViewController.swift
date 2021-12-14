@@ -144,7 +144,10 @@ class EventsDetailViewController: UIViewController,NVActivityIndicatorViewable {
 
     func HandleTransferLeadsClick() {
         
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TeamMemberVC") as! TeamMemberVC
+        vc.selectedEventObj = self.objEventDetail
+        vc.isTransferLeads = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func btnEditClick(_ sender: UIButton) {

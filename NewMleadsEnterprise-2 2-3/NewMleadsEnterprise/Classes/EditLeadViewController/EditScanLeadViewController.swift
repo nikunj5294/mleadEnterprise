@@ -527,7 +527,6 @@ class EditScanLeadViewController: UIViewController, NVActivityIndicatorViewable 
                 switch result {
                 case .success(let upload, _, _):
 
-                    self.stopAnimating()
                     
                     upload.responseJSON { response in
                         
@@ -536,6 +535,8 @@ class EditScanLeadViewController: UIViewController, NVActivityIndicatorViewable 
                                 if let statusData = addleadData["status"] as? String{
                                     
                                     if statusData == "YES"{
+                                        self.stopAnimating()
+
                                         ShowAlert(title: "Mleads", message: "Lead Successfully Created", buttonTitle: "Ok") {
                                             for case let vc as AddLeadViewController in self.navigationController?.viewControllers ?? [UIViewController()] {
                                                 NotificationCenter.default.post(name: Notification.Name("callRefreshAPI"), object: nil, userInfo: nil)
@@ -544,6 +545,8 @@ class EditScanLeadViewController: UIViewController, NVActivityIndicatorViewable 
                                             }
                                         }
                                     }else{
+                                        self.stopAnimating()
+
                                         ShowAlert(title: "Mleads", message: "Something Went Wrong, Please try again.", buttonTitle: "Ok") {
 //                                            self.navigationController?.popViewController(animated: true)
                                         }
@@ -763,7 +766,6 @@ class EditScanLeadViewController: UIViewController, NVActivityIndicatorViewable 
             switch result {
             case .success(let upload, _, _):
                 
-                self.stopAnimating()
                 
                 upload.responseJSON { response in
                     
@@ -772,10 +774,14 @@ class EditScanLeadViewController: UIViewController, NVActivityIndicatorViewable 
                             if let statusData = addleadData["status"] as? String{
                                 
                                 if statusData == "YES"{
+                                    self.stopAnimating()
+
                                     ShowAlert(title: "Mleads", message: "Lead Successfully Created", buttonTitle: "Ok") {
                                         self.navigationController?.popViewController(animated: true)
                                     }
                                 }else{
+                                    self.stopAnimating()
+
                                     ShowAlert(title: "Mleads", message: "Something Went Wrong, Please try again.", buttonTitle: "Ok") {
                                         //                                            self.navigationController?.popViewController(animated: true)
                                     }

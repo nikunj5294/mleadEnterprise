@@ -109,12 +109,13 @@ class QuickRecordViewController: UIViewController, NVActivityIndicatorViewable {
                 switch result {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
-                        self.stopAnimating()
                         print("response :", response)
                         if let JSON = response.result.value {
                             if let addleadData = (JSON as AnyObject).value(forKey: "addLead") as? [String:Any]{
                                 if let statusData = addleadData["status"] as? String{
                                     if statusData == "YES"{
+                                        self.stopAnimating()
+
                                         ShowAlert(title: "Mleads", message: "Lead Successfully Created", buttonTitle: "OK") {
                                             NotificationCenter.default.post(name: Notification.Name("callRefreshAPI"), object: nil, userInfo: nil)
                                             self.navigationController?.popViewController(animated: true)
@@ -123,6 +124,8 @@ class QuickRecordViewController: UIViewController, NVActivityIndicatorViewable {
                                 }
                             }
                         }else{
+                            self.stopAnimating()
+
                             ShowAlert(title: "Mleads", message: "Something went wrong, Please try again", buttonTitle: "OK") {
                             }
                         }

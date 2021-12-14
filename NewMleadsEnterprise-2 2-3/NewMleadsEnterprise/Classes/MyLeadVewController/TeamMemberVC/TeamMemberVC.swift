@@ -21,6 +21,8 @@ class TeamMemberVC: UIViewController,NVActivityIndicatorViewable {
     var arrLeadList = NSMutableArray()
     var isLeads = false
     var selectedTeamMember = TeamMember()
+    var isTransferLeads = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +43,20 @@ class TeamMemberVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     @IBAction func btnOkClick(_ sender: UIButton) {
+        if isTransferLeads
+        {
+            callAPIToTransferLeads()
+        }
+        else
+        {
+            callAPIToShareLead()
+        }
+    }
+    
+    //MARK:- Webservices Custom Function Call Method...
+    //
+    func callAPIToShareLead()
+    {
         var arrLeadIds = [String]()
         for i in 0..<self.arrLeadList.count
         {
@@ -53,7 +69,7 @@ class TeamMemberVC: UIViewController,NVActivityIndicatorViewable {
         if arrLeadIds.count == 0
         {
             let alert = UIAlertController(title: "", message: "Select one or more lead to share!",  preferredStyle: .alert)
-            let attributedString = Utilities.alertAttribute(titleString: "Messaging")
+            let attributedString = Utilities.alertAttribute(titleString: "Share")
             alert.setValue(attributedString, forKey: "attributedTitle")
             let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
             })
@@ -73,9 +89,40 @@ class TeamMemberVC: UIViewController,NVActivityIndicatorViewable {
         
         self.webService.doRequestPost(GET_ADDSHAREDLEAD, params: param, key: "AddShareLead", delegate: self)
     }
-    
-    //MARK:- Webservices Custom Function Call Method...
-    //
+    func callAPIToTransferLeads()
+    {
+        var arrLeadIds = [String]()
+        for i in 0..<self.arrLeadList.count
+        {
+            let lead = self.arrLeadList[i] as! LeadList
+            if lead.isSelected != nil && lead.isSelected == true
+            {
+                arrLeadIds.append(lead.leadId!)
+            }
+        }
+        if arrLeadIds.count == 0
+        {
+            let alert = UIAlertController(title: "", message: "Select one or more lead to transfer!",  preferredStyle: .alert)
+            let attributedString = Utilities.alertAttribute(titleString: "Transfer")
+            alert.setValue(attributedString, forKey: "attributedTitle")
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+            })
+            OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+            
+            alert.addAction(OKAction)
+            present(alert,animated: true,completion: nil)
+            return
+        }
+        let strIDS = arrLeadIds.joined(separator: ",")
+        
+        let param:[String : AnyObject] = ["userId":objLoginUserDetail.createTimeStamp! as AnyObject, "leadIds": strIDS as AnyObject, "eventId" : self.selectedEventObj.eventid! as AnyObject, "selectedId" : selectedTeamMember.created_timestamp as AnyObject, "type" : "E" as AnyObject]
+//            self.objLeadList.createTimeStamp
+        //Progress Bar Loding...
+        let size = CGSize(width: 30, height: 30)
+        self.startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
+        
+        self.webService.doRequestPost(TRANFER_LEADS, params: param, key: "getTransferLead", delegate: self)
+    }
     func CallWebServiceToGetAddTeamMemberList()
     {
         let param:[String : AnyObject] = ["userId":objLoginUserDetail.createTimeStamp! as AnyObject,
@@ -185,6 +232,28 @@ extension TeamMemberVC: WebServiceDelegate{
                 print("FALSE")
             }
         }
+        else if apiKey == TRANFER_LEADS
+        {
+            let json = JSON(data: response)
+            print(json)
+
+            if json["addTransferLead"]["status"].string == "YES"
+            {
+                let alert = UIAlertController(title: "", message: "Transfer leads completed successfully.",  preferredStyle: .alert)
+                let attributedString = Utilities.alertAttribute(titleString: "Transfer Leads")
+                alert.setValue(attributedString, forKey: "attributedTitle")
+                let OKAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
+                    
+                })
+                OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
+                
+                alert.addAction(OKAction)
+                present(alert,animated: true,completion: nil)
+                print("TRUE")
+            }else{
+                print("FALSE")
+            }
+        }
     }
     
     func webServiceResponceFailure(_ errorMessage: String) {
@@ -278,6 +347,7 @@ extension TeamMemberVC:UITableViewDelegate,UITableViewDataSource {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "TeamMemberVC") as! TeamMemberVC
             vc.selectedEventObj = self.selectedEventObj
             vc.isLeads = true
+            vc.isTransferLeads = self.isTransferLeads
             vc.selectedTeamMember = arrTeamMemberList[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }

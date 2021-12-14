@@ -132,7 +132,7 @@ var EDIT_LEAD_API_URL = "updateLeadPost.php"
 var GET_LEADLIST_EVENTWISE  = "getEventWiseLeadList.php"
 var GET_ADDSHAREDLEAD  = "getAddShareLead.php"
 var UN_SHARE_LEAD  = "unshareLead.php"
-
+var TRANFER_LEADS  = "getTransferLead.php"
 
 //Ajay
 struct AppColor {
