@@ -4330,7 +4330,7 @@ INFO</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf8-v1-Jbl">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightemail" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-IS-nQw">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweighttaskevent" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-IS-nQw">
                                                                                                         <rect key="frame" x="37.666666666666664" y="0.0" width="49.999999999999993" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="50" id="jin-WQ-SFH"/>
@@ -4369,7 +4369,7 @@ INFO</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hu3-O7-GRz">
                                                                                                 <rect key="frame" x="125" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightcall" translatesAutoresizingMaskIntoConstraints="NO" id="A86-pO-TI0">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightleads" translatesAutoresizingMaskIntoConstraints="NO" id="A86-pO-TI0">
                                                                                                         <rect key="frame" x="37.666666666666657" y="0.0" width="50" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="50" id="V0a-aQ-mC3"/>
@@ -4408,7 +4408,7 @@ INFO</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNT-fn-D4C">
                                                                                                 <rect key="frame" x="250" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightsms" translatesAutoresizingMaskIntoConstraints="NO" id="Ag4-Sa-tKb">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightimportlead" translatesAutoresizingMaskIntoConstraints="NO" id="Ag4-Sa-tKb">
                                                                                                         <rect key="frame" x="37.666666666666686" y="0.0" width="50" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="50" id="SQF-wi-C1p"/>
@@ -4452,7 +4452,7 @@ INFO</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEw-8E-4UA">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightsetupmetng" translatesAutoresizingMaskIntoConstraints="NO" id="1d5-TE-2EV">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightplaces" translatesAutoresizingMaskIntoConstraints="NO" id="1d5-TE-2EV">
                                                                                                         <rect key="frame" x="37.666666666666664" y="0.0" width="49.999999999999993" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="50" id="kvq-y5-6Vi"/>
@@ -4491,7 +4491,7 @@ INFO</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh0-W2-3Ck">
                                                                                                 <rect key="frame" x="125" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reneweightaddtoaddressbook" translatesAutoresizingMaskIntoConstraints="NO" id="aWg-P5-CWB">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="renewninesmstoall" translatesAutoresizingMaskIntoConstraints="NO" id="aWg-P5-CWB">
                                                                                                         <rect key="frame" x="37.666666666666657" y="0.0" width="50" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="50" id="1ML-uO-DO0"/>
@@ -4530,7 +4530,7 @@ INFO</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-vq-ghC">
                                                                                                 <rect key="frame" x="250" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remanual" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-fc-u0G">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redeleteallleads" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-fc-u0G">
                                                                                                         <rect key="frame" x="37.666666666666686" y="0.0" width="50" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="height" constant="50" id="Dhc-So-5NX"/>
@@ -4576,7 +4576,7 @@ Leads</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dA-zx-D3d">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reexpense_tracking" translatesAutoresizingMaskIntoConstraints="NO" id="aie-d8-hka">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="renewsharelead" translatesAutoresizingMaskIntoConstraints="NO" id="aie-d8-hka">
                                                                                                         <rect key="frame" x="37.666666666666664" y="0.0" width="49.999999999999993" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="50" id="0Mc-Qh-MEG"/>
@@ -4617,7 +4617,7 @@ Leads</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2e-Hv-Zzl">
                                                                                                 <rect key="frame" x="125" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refollow_up_lead" translatesAutoresizingMaskIntoConstraints="NO" id="H9j-gf-XZc">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="renewunsharedlead" translatesAutoresizingMaskIntoConstraints="NO" id="H9j-gf-XZc">
                                                                                                         <rect key="frame" x="37.666666666666657" y="0.0" width="50" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="50" id="DSQ-z6-BrN"/>
@@ -4656,7 +4656,7 @@ Leads</string>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-4y-vwv">
                                                                                                 <rect key="frame" x="250" y="0.0" width="125" height="100"/>
                                                                                                 <subviews>
-                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reopp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-X4-K2B">
+                                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="renewtransfer_lead" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-X4-K2B">
                                                                                                         <rect key="frame" x="37.666666666666686" y="0.0" width="50" height="50"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="50" id="EKe-op-itu"/>
@@ -19162,10 +19162,10 @@ Leads</string>
             <size key="intrinsicContentSize" width="115" height="17"/>
         </designable>
         <designable name="5fT-Lo-rJq">
-            <size key="intrinsicContentSize" width="72.333333333333329" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="72.333333333333329" height="25"/>
         </designable>
         <designable name="9hZ-3S-73H">
-            <size key="intrinsicContentSize" width="44.666666666666664" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="44.666666666666664" height="25"/>
         </designable>
         <designable name="CnR-ER-rOj">
             <size key="intrinsicContentSize" width="263" height="23.333333333333332"/>
@@ -19198,7 +19198,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="69" height="18.666666666666668"/>
         </designable>
         <designable name="PSO-RQ-iId">
-            <size key="intrinsicContentSize" width="111.33333333333333" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="111.33333333333333" height="25"/>
         </designable>
         <designable name="Qg0-aH-L4h">
             <size key="intrinsicContentSize" width="96.666666666666671" height="18.666666666666668"/>
@@ -19243,7 +19243,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="94.666666666666671" height="17"/>
         </designable>
         <designable name="fJf-2b-qOZ">
-            <size key="intrinsicContentSize" width="130.66666666666666" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="130.66666666666666" height="25"/>
         </designable>
         <designable name="gYf-ry-bSC">
             <size key="intrinsicContentSize" width="225.33333333333334" height="19.666666666666668"/>
@@ -19267,16 +19267,16 @@ Leads</string>
             <size key="intrinsicContentSize" width="43.333333333333336" height="18.666666666666668"/>
         </designable>
         <designable name="mdn-98-wgX">
-            <size key="intrinsicContentSize" width="67.666666666666671" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="67.666666666666671" height="25"/>
         </designable>
         <designable name="oof-aY-quH">
-            <size key="intrinsicContentSize" width="70.333333333333329" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="70.333333333333329" height="25"/>
         </designable>
         <designable name="r1z-DI-whB">
             <size key="intrinsicContentSize" width="59" height="18.666666666666668"/>
         </designable>
         <designable name="swD-IY-ciq">
-            <size key="intrinsicContentSize" width="33.666666666666664" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="33.666666666666664" height="25"/>
         </designable>
         <designable name="trB-oY-bSo">
             <size key="intrinsicContentSize" width="70" height="18.666666666666668"/>
@@ -19364,15 +19364,24 @@ Leads</string>
         <image name="quick record" width="64" height="64"/>
         <image name="radio-button-selected" width="24.666666030883789" height="24.333333969116211"/>
         <image name="radio-button-unselected" width="24.666666030883789" height="24.333333969116211"/>
+        <image name="redeleteallleads" width="66.666664123535156" height="70"/>
         <image name="reexpense_tracking" width="70" height="70"/>
         <image name="refollow_up_lead" width="70" height="70"/>
         <image name="remanual" width="70" height="70"/>
         <image name="reneweightaddtoaddressbook" width="70" height="70"/>
         <image name="reneweightcall" width="70" height="70"/>
         <image name="reneweightemail" width="70" height="70"/>
+        <image name="reneweightimportlead" width="70" height="70"/>
         <image name="reneweightleadcreatetask" width="70" height="70"/>
+        <image name="reneweightleads" width="70" height="70"/>
+        <image name="reneweightplaces" width="70" height="70"/>
         <image name="reneweightsetupmetng" width="70" height="70"/>
         <image name="reneweightsms" width="70" height="70"/>
+        <image name="reneweighttaskevent" width="63" height="63"/>
+        <image name="renewninesmstoall" width="70" height="70"/>
+        <image name="renewsharelead" width="70" height="70"/>
+        <image name="renewtransfer_lead" width="70" height="70"/>
+        <image name="renewunsharedlead" width="70" height="70"/>
         <image name="reopp_icon" width="70" height="70"/>
         <image name="restopdripemail" width="70" height="70"/>
         <image name="result" width="90" height="90"/>
