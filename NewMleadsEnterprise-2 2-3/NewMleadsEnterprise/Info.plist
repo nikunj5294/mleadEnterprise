@@ -71,6 +71,15 @@
 		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>http://api.eventful.com/</key>
+			<dict/>
+			<key>NSExceptionAllowsInsecureHTTPLoads</key>
+			<true/>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Access camera</string>

@@ -110,8 +110,10 @@ class EventsDetailViewController: UIViewController,NVActivityIndicatorViewable {
     }
 
     func handlePlacesClick() {
-        let eventVC = mainStoryboard.instantiateViewController(withIdentifier:  "TestViewController") as! TestViewController
-        self.navigationController?.pushViewController(eventVC, animated: true)
+//        let eventVC = mainStoryboard.instantiateViewController(withIdentifier:  "TestViewController") as! TestViewController
+//        self.navigationController?.pushViewController(eventVC, animated: true)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceNearbyVC") as! PlaceNearbyVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func handleMessageClick() {

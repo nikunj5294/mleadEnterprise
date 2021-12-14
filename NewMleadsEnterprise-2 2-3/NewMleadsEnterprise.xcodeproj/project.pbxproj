@@ -62,6 +62,7 @@
 		B222AB7327623E080036CF71 /* DeleteLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */; };
 		B25E7CC92767579F0091B440 /* UnShareLeadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */; };
 		B298B5492765FFDA00A10D29 /* TeamMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298B5482765FFDA00A10D29 /* TeamMemberVC.swift */; };
+		B2AF64792768BF4000C7AAF2 /* PlaceNearbyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF64782768BF4000C7AAF2 /* PlaceNearbyVC.swift */; };
 		D5B5961DCCC214F86FF7B701 /* Pods_NewMleadsEnterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752D2B1AF5DE26AF1C0F8B1F /* Pods_NewMleadsEnterprise.framework */; };
 		E90A373125728597004A2275 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90A373025728597004A2275 /* Setting.storyboard */; };
 		E90A373425728C79004A2275 /* MoreInfoAboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */; };
@@ -245,6 +246,7 @@
 		B222AB7227623E080036CF71 /* DeleteLeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLeadViewController.swift; sourceTree = "<group>"; };
 		B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnShareLeadVC.swift; sourceTree = "<group>"; };
 		B298B5482765FFDA00A10D29 /* TeamMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberVC.swift; sourceTree = "<group>"; };
+		B2AF64782768BF4000C7AAF2 /* PlaceNearbyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNearbyVC.swift; sourceTree = "<group>"; };
 		E90A373025728597004A2275 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoAboutUs.swift; sourceTree = "<group>"; };
 		E92631BC25EB843D00A42ED8 /* CreateSetupMeetingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSetupMeetingVC.swift; sourceTree = "<group>"; };
@@ -668,6 +670,14 @@
 			path = TeamMemberVC;
 			sourceTree = "<group>";
 		};
+		B2AF64762768BF2300C7AAF2 /* PlaceNearbyVC */ = {
+			isa = PBXGroup;
+			children = (
+				B2AF64782768BF4000C7AAF2 /* PlaceNearbyVC.swift */,
+			);
+			path = PlaceNearbyVC;
+			sourceTree = "<group>";
+		};
 		DEF7745CB97755A01E9DCAA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,6 +1028,7 @@
 		F19D5FD522D079D900362BA0 /* MyLeadVewController */ = {
 			isa = PBXGroup;
 			children = (
+				B2AF64762768BF2300C7AAF2 /* PlaceNearbyVC */,
 				B25E7CC7276757810091B440 /* UnShareLeadVC */,
 				B298B5472765FF9C00A10D29 /* TeamMemberVC */,
 				B222AB6F27623DA80036CF71 /* DeleteLeadViewController */,
@@ -1490,6 +1501,7 @@
 				04054526275F2CCF006E330A /* MapMarkerWindow.swift in Sources */,
 				F1C319B7242101B000FE1292 /* PipeLineViewController.swift in Sources */,
 				F14BD0F623D72D90008EB08E /* CIColorExtension.swift in Sources */,
+				B2AF64792768BF4000C7AAF2 /* PlaceNearbyVC.swift in Sources */,
 				F11AEB9C23B60EA1004790E7 /* test2ViewController.swift in Sources */,
 				F14B012E2323CB800082AA10 /* PasswordResetViewController.swift in Sources */,
 				B298B5492765FFDA00A10D29 /* TeamMemberVC.swift in Sources */,

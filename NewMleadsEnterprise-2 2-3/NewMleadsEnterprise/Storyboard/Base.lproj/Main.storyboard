@@ -4051,6 +4051,43 @@ INFO</string>
             </objects>
             <point key="canvasLocation" x="1823" y="-1382"/>
         </scene>
+        <!--Place NearbyVC-->
+        <scene sceneID="k2h-wt-ZHX">
+            <objects>
+                <viewController storyboardIdentifier="PlaceNearbyVC" id="e2W-d3-nRe" customClass="PlaceNearbyVC" customModule="NewMleadsEnterprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Jn-vS-Cj7"/>
+                        <viewControllerLayoutGuide type="bottom" id="c7i-Tx-JzB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z7g-nj-73g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uxz-FZ-wRn">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e2W-d3-nRe" id="qVo-qb-ex6"/>
+                                    <outlet property="delegate" destination="e2W-d3-nRe" id="hWR-Pe-8GT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uxz-FZ-wRn" secondAttribute="trailing" id="0EQ-ai-Ptj"/>
+                            <constraint firstItem="uxz-FZ-wRn" firstAttribute="leading" secondItem="Z7g-nj-73g" secondAttribute="leading" id="0bS-0T-Yjs"/>
+                            <constraint firstItem="c7i-Tx-JzB" firstAttribute="top" secondItem="uxz-FZ-wRn" secondAttribute="bottom" id="LCO-mP-KKQ"/>
+                            <constraint firstItem="uxz-FZ-wRn" firstAttribute="top" secondItem="6Jn-vS-Cj7" secondAttribute="bottom" id="mVG-rV-UdV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="uxz-FZ-wRn" id="IVy-xt-0ZE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1k9-0t-ssK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="-2268"/>
+        </scene>
         <!--Events Detail View Controller-->
         <scene sceneID="e8S-wi-znF">
             <objects>
@@ -19162,10 +19199,10 @@ Leads</string>
             <size key="intrinsicContentSize" width="115" height="17"/>
         </designable>
         <designable name="5fT-Lo-rJq">
-            <size key="intrinsicContentSize" width="72.333333333333329" height="25"/>
+            <size key="intrinsicContentSize" width="72.333333333333329" height="24.666666666666668"/>
         </designable>
         <designable name="9hZ-3S-73H">
-            <size key="intrinsicContentSize" width="44.666666666666664" height="25"/>
+            <size key="intrinsicContentSize" width="44.666666666666664" height="24.666666666666668"/>
         </designable>
         <designable name="CnR-ER-rOj">
             <size key="intrinsicContentSize" width="263" height="23.333333333333332"/>
@@ -19198,7 +19235,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="69" height="18.666666666666668"/>
         </designable>
         <designable name="PSO-RQ-iId">
-            <size key="intrinsicContentSize" width="111.33333333333333" height="25"/>
+            <size key="intrinsicContentSize" width="111.33333333333333" height="24.666666666666668"/>
         </designable>
         <designable name="Qg0-aH-L4h">
             <size key="intrinsicContentSize" width="96.666666666666671" height="18.666666666666668"/>
@@ -19243,7 +19280,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="94.666666666666671" height="17"/>
         </designable>
         <designable name="fJf-2b-qOZ">
-            <size key="intrinsicContentSize" width="130.66666666666666" height="25"/>
+            <size key="intrinsicContentSize" width="130.66666666666666" height="24.666666666666668"/>
         </designable>
         <designable name="gYf-ry-bSC">
             <size key="intrinsicContentSize" width="225.33333333333334" height="19.666666666666668"/>
@@ -19267,16 +19304,16 @@ Leads</string>
             <size key="intrinsicContentSize" width="43.333333333333336" height="18.666666666666668"/>
         </designable>
         <designable name="mdn-98-wgX">
-            <size key="intrinsicContentSize" width="67.666666666666671" height="25"/>
+            <size key="intrinsicContentSize" width="67.666666666666671" height="24.666666666666668"/>
         </designable>
         <designable name="oof-aY-quH">
-            <size key="intrinsicContentSize" width="70.333333333333329" height="25"/>
+            <size key="intrinsicContentSize" width="70.333333333333329" height="24.666666666666668"/>
         </designable>
         <designable name="r1z-DI-whB">
             <size key="intrinsicContentSize" width="59" height="18.666666666666668"/>
         </designable>
         <designable name="swD-IY-ciq">
-            <size key="intrinsicContentSize" width="33.666666666666664" height="25"/>
+            <size key="intrinsicContentSize" width="33.666666666666664" height="24.666666666666668"/>
         </designable>
         <designable name="trB-oY-bSo">
             <size key="intrinsicContentSize" width="70" height="18.666666666666668"/>
