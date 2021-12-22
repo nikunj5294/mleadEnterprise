@@ -586,6 +586,71 @@ open class HandleWebService:NSObject
         }
         return (isStatus, arrAllTeamMember)
     }
+    func handleGetMessageList(_ response: Data) -> (Status: Bool, arrUserWiseMessageList: [UserWiseMessageList])
+    {
+        var isStatus:Bool = false
+        var arrUserWiseMessageList = [UserWiseMessageList]()
+        
+        let json = JSON(data: response)
+        print(json)
+        
+        
+        if json["getFollowUpMessageList"]["status"].string == "YES"
+        {
+            let eventLeadList = json["getFollowUpMessageList"]["eventFollowUpMessageList"].array
+            
+            for k in 0..<eventLeadList!.count
+            {
+                let userDetailArr = eventLeadList![k]["userDetailArr"].dictionary
+                let teamMember = TeamMember()
+                teamMember.first_name = userDetailArr!["first_name"]?.string
+                teamMember.last_name = userDetailArr!["last_name"]?.string
+                teamMember.created_timestamp = userDetailArr!["created_timestamp"]?.string
+                teamMember.export_allowed = userDetailArr!["export_allowed"]?.string
+                teamMember.reportsTo = userDetailArr!["reportsTo"]?.string
+                
+                let eventWiseLeadArr = eventLeadList![k]["eventWiseLeadArr"].array
+                for i in 0..<eventWiseLeadArr!.count
+                {
+                    let objEventList = eventWiseLeadArr![i]
+                    let objEvent: EventDetail = EventDetail()
+                    objEvent.eventName =  objEventList["eventName"].string
+                    objEvent.eventid = objEventList["eventId"].string
+                    objEvent.createdTimeStamp = objEventList["eventId"].string
+                    objEvent.location = objEventList["location"].string
+                    objEvent.city = objEventList["city"].string
+                    objEvent.eventDate = objEventList["eventDate"].string
+                    objEvent.Agenda = objEventList["Agenda"].string
+                    
+                    let messageList = objEventList["leadList"].array
+                    var arrMessageList = [MessageList]()
+                    for l in 0..<messageList!.count
+                    {
+                        let objMsgList = messageList![l]
+                        let objMessage:MessageList = MessageList()
+                        objMessage.messageId = objMsgList["messageId"].string
+                        objMessage.eventId = objMsgList["eventId"].string
+                        objMessage.subject = objMsgList["subject"].string
+                        objMessage.message = objMsgList["message"].string
+                        objMessage.attachmentCount = objMsgList["attachmentCount"].string
+                        objMessage.editedfrom = objMsgList["editedfrom"].string
+                        arrMessageList.append(objMessage)
+                    }
+                    if arrMessageList.count>0
+                    {
+                        var dictLead = UserWiseMessageList(member: nil, event: nil, messageList: nil)
+                        dictLead.member = teamMember
+                        dictLead.event = objEvent
+                        dictLead.messageList = arrMessageList
+                        arrUserWiseMessageList.append(dictLead)
+                    }
+                }
+                
+            }
+            isStatus = true
+        }
+        return (isStatus, arrUserWiseMessageList)
+    }
    //20/1
    //20/1/2020/11/2019
     //MARK:- Close window In Tempary on DAta Change in team member and event within date 16/10/2019

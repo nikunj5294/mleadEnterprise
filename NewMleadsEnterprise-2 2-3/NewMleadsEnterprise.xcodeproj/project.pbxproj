@@ -63,6 +63,13 @@
 		B25E7CC92767579F0091B440 /* UnShareLeadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */; };
 		B298B5492765FFDA00A10D29 /* TeamMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298B5482765FFDA00A10D29 /* TeamMemberVC.swift */; };
 		B2AF64792768BF4000C7AAF2 /* PlaceNearbyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF64782768BF4000C7AAF2 /* PlaceNearbyVC.swift */; };
+		B2C8F4B12772FA8000B80CFE /* AddEmailTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F4B02772FA8000B80CFE /* AddEmailTemplateVC.swift */; };
+		B2C8F4B32772FAEE00B80CFE /* EmailTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F4B22772FAED00B80CFE /* EmailTemplateVC.swift */; };
+		B2C8F4B52773165D00B80CFE /* EmailTemplateListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F4B42773165D00B80CFE /* EmailTemplateListVC.swift */; };
+		B2C8F4B927731A9E00B80CFE /* EmailTemplateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F4B827731A9E00B80CFE /* EmailTemplateHeaderView.swift */; };
+		B2C8F4BB27731AD100B80CFE /* EmailTemplateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C8F4BA27731AD100B80CFE /* EmailTemplateHeaderView.xib */; };
+		B2C8F4BD27731D7600B80CFE /* EmailTemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F4BC27731D7600B80CFE /* EmailTemplateCell.swift */; };
+		B2C8F4BF2773223C00B80CFE /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8F4BE2773223C00B80CFE /* MessageList.swift */; };
 		D5B5961DCCC214F86FF7B701 /* Pods_NewMleadsEnterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752D2B1AF5DE26AF1C0F8B1F /* Pods_NewMleadsEnterprise.framework */; };
 		E90A373125728597004A2275 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90A373025728597004A2275 /* Setting.storyboard */; };
 		E90A373425728C79004A2275 /* MoreInfoAboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */; };
@@ -247,6 +254,13 @@
 		B25E7CC82767579F0091B440 /* UnShareLeadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnShareLeadVC.swift; sourceTree = "<group>"; };
 		B298B5482765FFDA00A10D29 /* TeamMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberVC.swift; sourceTree = "<group>"; };
 		B2AF64782768BF4000C7AAF2 /* PlaceNearbyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNearbyVC.swift; sourceTree = "<group>"; };
+		B2C8F4B02772FA8000B80CFE /* AddEmailTemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailTemplateVC.swift; sourceTree = "<group>"; };
+		B2C8F4B22772FAED00B80CFE /* EmailTemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTemplateVC.swift; sourceTree = "<group>"; };
+		B2C8F4B42773165D00B80CFE /* EmailTemplateListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTemplateListVC.swift; sourceTree = "<group>"; };
+		B2C8F4B827731A9E00B80CFE /* EmailTemplateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTemplateHeaderView.swift; sourceTree = "<group>"; };
+		B2C8F4BA27731AD100B80CFE /* EmailTemplateHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailTemplateHeaderView.xib; sourceTree = "<group>"; };
+		B2C8F4BC27731D7600B80CFE /* EmailTemplateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTemplateCell.swift; sourceTree = "<group>"; };
+		B2C8F4BE2773223C00B80CFE /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		E90A373025728597004A2275 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		E90A373325728C79004A2275 /* MoreInfoAboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoAboutUs.swift; sourceTree = "<group>"; };
 		E92631BC25EB843D00A42ED8 /* CreateSetupMeetingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSetupMeetingVC.swift; sourceTree = "<group>"; };
@@ -499,6 +513,7 @@
 			children = (
 				99A2831D2279A08B00C0748D /* UserDetail.swift */,
 				F17E075022C4C5A4007E07A3 /* EventDetail.swift */,
+				B2C8F4BE2773223C00B80CFE /* MessageList.swift */,
 				F17E075222C4D874007E07A3 /* Event.swift */,
 				F17E075622C4FCC0007E07A3 /* TeamMember.swift */,
 				F117A160230D7C39003E5ADE /* LeadGroupDetail.swift */,
@@ -630,6 +645,7 @@
 				99D995CC225CD2DD00F33DE6 /* SignUpViewController */,
 				99F9B97322572AF700F9E6B9 /* LoginView */,
 				9988CB232282ECBC004D6DD2 /* RootViewController.swift */,
+				B2C8F4AF2772FA0200B80CFE /* EmailTemplate */,
 				F1834E1024249BE2007F01C6 /* ReferViewController.swift */,
 				F169B8672722E3F70054B454 /* QuickNoteViewController.swift */,
 			);
@@ -676,6 +692,19 @@
 				B2AF64782768BF4000C7AAF2 /* PlaceNearbyVC.swift */,
 			);
 			path = PlaceNearbyVC;
+			sourceTree = "<group>";
+		};
+		B2C8F4AF2772FA0200B80CFE /* EmailTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				B2C8F4B02772FA8000B80CFE /* AddEmailTemplateVC.swift */,
+				B2C8F4B42773165D00B80CFE /* EmailTemplateListVC.swift */,
+				B2C8F4B22772FAED00B80CFE /* EmailTemplateVC.swift */,
+				B2C8F4B827731A9E00B80CFE /* EmailTemplateHeaderView.swift */,
+				B2C8F4BC27731D7600B80CFE /* EmailTemplateCell.swift */,
+				B2C8F4BA27731AD100B80CFE /* EmailTemplateHeaderView.xib */,
+			);
+			path = EmailTemplate;
 			sourceTree = "<group>";
 		};
 		DEF7745CB97755A01E9DCAA9 /* Frameworks */ = {
@@ -1277,6 +1306,7 @@
 				99C233232255BE980077C217 /* Assets.xcassets in Resources */,
 				F18F6E8B22A5449B00CD1044 /* LaunchTutorial-08.jpg in Resources */,
 				E90A373125728597004A2275 /* Setting.storyboard in Resources */,
+				B2C8F4BB27731AD100B80CFE /* EmailTemplateHeaderView.xib in Resources */,
 				99C233212255BE8D0077C217 /* Main.storyboard in Resources */,
 				F18F6E8222A5449B00CD1044 /* LaunchTutorial-01.jpg in Resources */,
 				F1BAAC8B22D3178D005F02E6 /* MLeadAppDb.sqlite in Resources */,
@@ -1394,6 +1424,7 @@
 				E941CBEE257A9C7E00BF6C3D /* SystemOptionProductQualifier.swift in Sources */,
 				990AE549229589E9005C467F /* AddViewController.swift in Sources */,
 				B222AB7327623E080036CF71 /* DeleteLeadViewController.swift in Sources */,
+				B2C8F4BF2773223C00B80CFE /* MessageList.swift in Sources */,
 				48503CE125E28DFE00A929D7 /* CreateTaskListing.swift in Sources */,
 				F10191612357531F00F92810 /* SalesReportViewController.swift in Sources */,
 				E9FFB4092573B48F003651ED /* MoreInfoPrivacyPolicy.swift in Sources */,
@@ -1431,6 +1462,7 @@
 				F1438A3D23EBE4A300AEBEE3 /* SalesCycleReportDetailViewController.swift in Sources */,
 				F1EFE3D0235864F800774AEF /* ScheduledTasksViewController.swift in Sources */,
 				99F74E302281AFA90004A4D5 /* Utilities.swift in Sources */,
+				B2C8F4B32772FAEE00B80CFE /* EmailTemplateVC.swift in Sources */,
 				E9D5032925794FD2008F117D /* Global.swift in Sources */,
 				0493902D2635A37B003F1639 /* AddNotesViewController.swift in Sources */,
 				F1E3D6FE22C749D200191544 /* AddEventViewController.swift in Sources */,
@@ -1452,6 +1484,7 @@
 				9912AAF22284455B0037200E /* DashboardViewController.swift in Sources */,
 				F10C23042359DF88007DE8AB /* TaskList.swift in Sources */,
 				049390CD26374B5D003F1639 /* SalesOpportunityViewController.swift in Sources */,
+				B2C8F4BD27731D7600B80CFE /* EmailTemplateCell.swift in Sources */,
 				F1D30BE422CDD04F00165E07 /* DatePickerPopover.swift in Sources */,
 				04939050263680A5003F1639 /* SurveyQuestionnaireViewController.swift in Sources */,
 				E92631C825EBFAB500A42ED8 /* ExpenseTrackingVC.swift in Sources */,
@@ -1469,11 +1502,13 @@
 				F101915D23574F9300F92810 /* ProductIntrestbyPercentageViewController.swift in Sources */,
 				F1A7AF732306B234009516E7 /* DashboardReportViewController.swift in Sources */,
 				046848BE27424EB300F7E902 /* EditScanLeadViewController.swift in Sources */,
+				B2C8F4B927731A9E00B80CFE /* EmailTemplateHeaderView.swift in Sources */,
 				F101915F2357521700F92810 /* SalesCycleReportViewController.swift in Sources */,
 				04F0079A2704F4A6002BFA5E /* ShowProfileViewController.swift in Sources */,
 				F117A161230D7C39003E5ADE /* LeadGroupDetail.swift in Sources */,
 				99F9B97522572D5000F9E6B9 /* LoginViewController.swift in Sources */,
 				F169B8682722E3F70054B454 /* QuickNoteViewController.swift in Sources */,
+				B2C8F4B12772FA8000B80CFE /* AddEmailTemplateVC.swift in Sources */,
 				F1CA42EC23360429005350D3 /* TeamManagementViewController.swift in Sources */,
 				E92631BD25EB843D00A42ED8 /* CreateSetupMeetingVC.swift in Sources */,
 				F10191632357547D00F92810 /* PipelineSalesReportViewController.swift in Sources */,
@@ -1488,6 +1523,7 @@
 				F1132AC123DAF2F400367B6B /* VideoViewDetailViewController.swift in Sources */,
 				F18844D022C37B020077F4F6 /* StringPickerPopOver.swift in Sources */,
 				F1FED3D022A1396300ADD90C /* LaunchViewController.swift in Sources */,
+				B2C8F4B52773165D00B80CFE /* EmailTemplateListVC.swift in Sources */,
 				E936B3222575539800C2886B /* MoreInfoPricing.swift in Sources */,
 				E9D5032C25794FD2008F117D /* WebService.swift in Sources */,
 				99C2331C2255BE8D0077C217 /* AppDelegate.swift in Sources */,

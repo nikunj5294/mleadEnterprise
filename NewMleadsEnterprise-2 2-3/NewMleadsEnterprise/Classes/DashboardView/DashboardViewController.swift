@@ -264,9 +264,8 @@ extension DashboardViewController: UICollectionViewDelegate,UICollectionViewData
         }
         else if indexPath.row == 4{
             print("data Not printe Error On Page MAil ")
-//            let emailVC = mainStoryboard.instantiateViewController(withIdentifier: "")
-//            self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: true)
-            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "EmailTemplateListVC") as! EmailTemplateListVC
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         else if indexPath.row == 5{
             print("data Not printe Error On Page Report")
@@ -314,6 +313,8 @@ extension DashboardViewController: dismissAddMenuPopUpDelegate{
                 print("3")
             case 4:
                 print("4")
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "EmailTemplateListVC") as! EmailTemplateListVC
+                self.navigationController?.pushViewController(vc, animated: true)
             default:
                 print("dismiss")
             }

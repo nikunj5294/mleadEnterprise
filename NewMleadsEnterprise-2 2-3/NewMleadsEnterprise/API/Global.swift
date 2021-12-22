@@ -133,6 +133,8 @@ var GET_LEADLIST_EVENTWISE  = "getEventWiseLeadList.php"
 var GET_ADDSHAREDLEAD  = "getAddShareLead.php"
 var UN_SHARE_LEAD  = "unshareLead.php"
 var TRANFER_LEADS  = "getTransferLead.php"
+var GET_FollowUpMessageTemplates  = "getFollowUpMessageTemplates_Enterprise.php"
+var GET_DeleteFollowUpMessage  = "getDeleteFollowUpMessage.php"
 
 //Ajay
 struct AppColor {
