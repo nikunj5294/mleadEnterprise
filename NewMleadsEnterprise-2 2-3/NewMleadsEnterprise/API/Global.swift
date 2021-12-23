@@ -135,6 +135,10 @@ var UN_SHARE_LEAD  = "unshareLead.php"
 var TRANFER_LEADS  = "getTransferLead.php"
 var GET_FollowUpMessageTemplates  = "getFollowUpMessageTemplates_Enterprise.php"
 var GET_DeleteFollowUpMessage  = "getDeleteFollowUpMessage.php"
+var GET_AddFollowUpMessagePost  = "getAddFollowUpMessagePost.php"
+var GET_EventListforFollowup  = "getEventListforFollowup.php"
+var UPDATE_FollowUpMessagePost  = "updateFollowUpMessagePost.php"
+
 
 //Ajay
 struct AppColor {

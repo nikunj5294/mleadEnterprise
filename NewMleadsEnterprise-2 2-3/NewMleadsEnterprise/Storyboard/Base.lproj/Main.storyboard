@@ -19456,6 +19456,7 @@ Leads</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw1-CW-XIn">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="39"/>
                                                 <connections>
+                                                    <action selector="btnSelectEventClick:" destination="yC1-PH-f9P" eventType="touchUpInside" id="xUc-8r-o7d"/>
                                                     <action selector="btnTeamMemberClick:" destination="i7s-qB-58u" eventType="touchUpInside" id="Ski-E8-UKI"/>
                                                 </connections>
                                             </button>
@@ -19545,6 +19546,9 @@ Leads</string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="selected" image="checkbox"/>
+                                <connections>
+                                    <action selector="btnPredefineClick:" destination="yC1-PH-f9P" eventType="touchUpInside" id="Vxq-TZ-l8X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6O-zC-JIQ">
                                 <rect key="frame" x="133.66666666666666" y="291.66666666666669" width="108" height="38"/>
@@ -19554,6 +19558,14 @@ Leads</string>
                                 <state key="normal" title="Attechments">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnAttachmentsClick:" destination="yC1-PH-f9P" eventType="touchUpInside" id="3KO-29-rpO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNK-Vt-6tH">
                                 <rect key="frame" x="16" y="337.66666666666669" width="343" height="36"/>
@@ -19562,7 +19574,7 @@ Leads</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="message *" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Shy-V0-Pew">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Shy-V0-Pew">
                                 <rect key="frame" x="16" y="389.66666666666674" width="343" height="318.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -19575,6 +19587,7 @@ Leads</string>
                                     <userDefinedRuntimeAttribute type="color" keyPath="layer.BorderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Message *"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-ko-pZz">
@@ -19585,6 +19598,14 @@ Leads</string>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnContinueClick:" destination="yC1-PH-f9P" eventType="touchUpInside" id="qRG-Zf-Qov"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -19617,6 +19638,12 @@ Leads</string>
                             <constraint firstItem="UNK-Vt-6tH" firstAttribute="top" secondItem="I6O-zC-JIQ" secondAttribute="bottom" constant="8" id="yWI-2o-QtK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPreDefine" destination="U1s-7n-8Pg" id="axW-Ae-Dub"/>
+                        <outlet property="lblSelectedEventGroup" destination="Bip-V9-DSY" id="Qx2-XP-Q1K"/>
+                        <outlet property="txtMessage" destination="Shy-V0-Pew" id="aig-o8-O4H"/>
+                        <outlet property="txtSubject" destination="Su2-W9-swV" id="PpG-on-iSf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UyE-Qd-dw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -19640,10 +19667,10 @@ Leads</string>
             <size key="intrinsicContentSize" width="115" height="17"/>
         </designable>
         <designable name="5fT-Lo-rJq">
-            <size key="intrinsicContentSize" width="72.333333333333329" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="72.333333333333329" height="25"/>
         </designable>
         <designable name="9hZ-3S-73H">
-            <size key="intrinsicContentSize" width="44.666666666666664" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="44.666666666666664" height="25"/>
         </designable>
         <designable name="CnR-ER-rOj">
             <size key="intrinsicContentSize" width="263" height="23.333333333333332"/>
@@ -19676,7 +19703,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="69" height="18.666666666666668"/>
         </designable>
         <designable name="PSO-RQ-iId">
-            <size key="intrinsicContentSize" width="111.33333333333333" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="111.33333333333333" height="25"/>
         </designable>
         <designable name="Qg0-aH-L4h">
             <size key="intrinsicContentSize" width="96.666666666666671" height="18.666666666666668"/>
@@ -19721,7 +19748,7 @@ Leads</string>
             <size key="intrinsicContentSize" width="94.666666666666671" height="17"/>
         </designable>
         <designable name="fJf-2b-qOZ">
-            <size key="intrinsicContentSize" width="130.66666666666666" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="130.66666666666666" height="25"/>
         </designable>
         <designable name="gYf-ry-bSC">
             <size key="intrinsicContentSize" width="225.33333333333334" height="19.666666666666668"/>
@@ -19745,16 +19772,16 @@ Leads</string>
             <size key="intrinsicContentSize" width="43.333333333333336" height="18.666666666666668"/>
         </designable>
         <designable name="mdn-98-wgX">
-            <size key="intrinsicContentSize" width="68" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="68" height="25"/>
         </designable>
         <designable name="oof-aY-quH">
-            <size key="intrinsicContentSize" width="70.333333333333329" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="70.333333333333329" height="25"/>
         </designable>
         <designable name="r1z-DI-whB">
             <size key="intrinsicContentSize" width="59" height="18.666666666666668"/>
         </designable>
         <designable name="swD-IY-ciq">
-            <size key="intrinsicContentSize" width="33.666666666666664" height="24.666666666666668"/>
+            <size key="intrinsicContentSize" width="33.666666666666664" height="25"/>
         </designable>
         <designable name="trB-oY-bSo">
             <size key="intrinsicContentSize" width="70" height="18.666666666666668"/>

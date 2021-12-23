@@ -29,10 +29,13 @@ class EmailTemplateListVC: UIViewController,NVActivityIndicatorViewable {
         self.tblView.register(EmailTemplateHeaderView.nib, forHeaderFooterViewReuseIdentifier: EmailTemplateHeaderView.reuseIdentifier)
 
         self.navigationItem.title = "Email Template"
-        
         let filter = UIBarButtonItem(image:#imageLiteral(resourceName: "filter"), style: .plain, target: self, action: #selector(self.btnFilter(_:)))//#selector(addTapped)
-               
         self.navigationItem.rightBarButtonItems = [filter]
+        
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         CallWebServiceToGetFollowUpMessageTemplates_Enterprise()
     }
     @IBAction func btnAddClick(_ sender: Any) {

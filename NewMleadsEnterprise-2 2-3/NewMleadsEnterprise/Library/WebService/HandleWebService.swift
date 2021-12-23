@@ -296,7 +296,34 @@ open class HandleWebService:NSObject
         print(arrAllEvents)
         return (isStatus, arrTeamMember, arrAllEvents)
     }
-    
+    func handleGetEventListForEmailTemplate(_ response: Data) -> (Status: Bool, arrEventL: [EventDetail])
+    {
+        var isStatus:Bool = false
+        var arrAllEvents = [EventDetail]()
+        let json = JSON(data: response)
+        
+        if json["getEventList"]["status"].string == "YES"
+        {
+            let eventArr = json["getEventList"]["eventList"]
+            for j in 0..<eventArr.count
+            {
+                let objEventList = eventArr[j]
+                let objEvent: EventDetail = EventDetail()
+                objEvent.eventName =  objEventList["eventName"].string
+                objEvent.eventid = objEventList["eventId"].string
+                objEvent.createdTimeStamp = objEventList["eventId"].string
+                objEvent.location = objEventList["location"].string
+                objEvent.city = objEventList["city"].string
+                objEvent.eventDate = objEventList["eventDate"].string
+                objEvent.isPrivate = objEventList["isPrivate"].string
+                
+                arrAllEvents.append(objEvent)
+            }
+            
+            isStatus = true
+        }
+        return (isStatus, arrAllEvents)
+    }
     //Comment in 18/6/2020
     func handleGetLeadList(_ response: Data) -> (Status: Bool, teamMember: [UserDetail], arrLeadList: NSMutableArray, arrDictList: NSMutableArray)
     {
