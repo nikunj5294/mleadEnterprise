@@ -102,15 +102,15 @@ class AddEmailTemplateVC: UIViewController,NVActivityIndicatorViewable {
     }
     func CallWebServiceAddMessageTemplate()
     {
-        let param:[String : AnyObject] = ["userId":objLoginUserDetail.createTimeStamp! as AnyObject,
-                                          "eventId":self.arrEvents[self.selectedIndexForEvent].eventid! as AnyObject,"subject":txtSubject.text! as AnyObject,"message":txtMessage.text! as AnyObject,"activeStatus":"YES" as AnyObject,"isPrivate":0 as AnyObject,"createdTimeStamp":String(Date.currentTimeStamp) as AnyObject,"updatedTimeStamp":"0" as AnyObject,"attachmentCount":0 as AnyObject,"email_prefix":(btnPreDefine.isSelected ? 1:0) as AnyObject]
+        let param:[String : String] = ["userId":objLoginUserDetail.createTimeStamp!,
+                                          "eventId":self.arrEvents[self.selectedIndexForEvent].eventid!,"subject":txtSubject.text!,"message":txtMessage.text!,"activeStatus":"YES","isPrivate":"0","createdTimeStamp":String(Date.currentTimeStamp),"updatedTimeStamp":"0","attachmentCount":"0","email_prefix":(btnPreDefine.isSelected ? "1":"0")]
         
         print(param)
         //Progress Bar Loding...
         let size = CGSize(width: 30, height: 30)
         startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
         
-        webService.doRequestPost(GET_AddFollowUpMessagePost, params: param, key: "addFollowUpMessage", delegate: self)
+        webService.doRequestPostInFormData(GET_AddFollowUpMessagePost, params: param, delegate: self)
         
     }
     func CallWebServiceGetEventList()
@@ -127,15 +127,14 @@ class AddEmailTemplateVC: UIViewController,NVActivityIndicatorViewable {
     }
     func CallWebServiceUpdateMessageTemplate()
     {
-        let param:[String : AnyObject] = ["messageId":self.selectedMessage!.messageId! as AnyObject,
-                                          "eventId":self.arrEvents[self.selectedIndexForEvent].eventid! as AnyObject,"subject":txtSubject.text! as AnyObject,"message":txtMessage.text! as AnyObject,"activeStatus":"YES" as AnyObject,"isPrivate":0 as AnyObject,"updatedTimeStamp":Date.currentTimeStamp as AnyObject,"attachmentCount":0 as AnyObject,"email_prefix":(btnPreDefine.isSelected ? 1:0) as AnyObject]
+        let param:[String : String] = ["messageId":self.selectedMessage!.messageId!,
+                                          "eventId":self.arrEvents[self.selectedIndexForEvent].eventid!,"subject":txtSubject.text!,"message":txtMessage.text!,"activeStatus":"YES","isPrivate":"0","updatedTimeStamp":String(Date.currentTimeStamp),"attachmentCount":"0","email_prefix":(btnPreDefine.isSelected ? "1":"0")]
         
         print(param)
         //Progress Bar Loding...
         let size = CGSize(width: 30, height: 30)
         startAnimating(size, message: "Loading...", type: NVActivityIndicatorType(rawValue: 29))
-        
-        webService.doRequestPost(UPDATE_FollowUpMessagePost, params: param, key: "updateFollowUpMessage", delegate: self)
+        webService.doRequestPostInFormData(UPDATE_FollowUpMessagePost, params: param, delegate: self)
         
     }
     /*
@@ -209,7 +208,10 @@ extension AddEmailTemplateVC: WebServiceDelegate{
                 OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
                 
                 alert.addAction(OKAction)
-                present(alert,animated: true,completion: nil)
+                DispatchQueue.main.async {
+                    self.present(alert,animated: true,completion: nil)
+                }
+                
                 print("TRUE")
             }else{
                 print("FALSE")
@@ -222,7 +224,9 @@ extension AddEmailTemplateVC: WebServiceDelegate{
                 OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
                 
                 alert.addAction(OKAction)
-                present(alert,animated: true,completion: nil)
+                DispatchQueue.main.async {
+                    self.present(alert,animated: true,completion: nil)
+                }
             }
             
         }
@@ -242,7 +246,9 @@ extension AddEmailTemplateVC: WebServiceDelegate{
                 OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
                 
                 alert.addAction(OKAction)
-                present(alert,animated: true,completion: nil)
+                DispatchQueue.main.async {
+                    self.present(alert,animated: true,completion: nil)
+                }
                 print("TRUE")
             }else{
                 print("FALSE")
@@ -255,7 +261,9 @@ extension AddEmailTemplateVC: WebServiceDelegate{
                 OKAction.setValue(alertbtnColor, forKey: "titleTextColor")
                 
                 alert.addAction(OKAction)
-                present(alert,animated: true,completion: nil)
+                DispatchQueue.main.async {
+                    self.present(alert,animated: true,completion: nil)
+                }
             }
             
         }
